@@ -7,11 +7,12 @@
   <meta name="description" content="BertlClaw ist dein persönlicher AI-Begleiter für Texte, Recherche, Struktur, Websites, Tools und digitale Projekte — mit klaren Grenzen und echter Umsetzungsstärke." />
   <style>
     :root {
-      --bg: #08111f;
-      --bg-soft: #101a2e;
-      --panel: rgba(255,255,255,0.06);
-      --panel-2: rgba(255,255,255,0.08);
-      --line: rgba(255,255,255,0.12);
+      --bg: #060914;
+      --bg-soft: #0d1426;
+      --panel: rgba(14,20,38,0.72);
+      --panel-2: rgba(18,26,47,0.88);
+      --line: rgba(148,170,255,0.16);
+      --line-strong: rgba(124,156,255,0.28);
       --text: #eef3ff;
       --muted: #aeb9d9;
       --accent: #7c9cff;
@@ -19,7 +20,8 @@
       --accent-3: #a28bff;
       --danger: #ff9c9c;
       --ok: #86f0c8;
-      --shadow: 0 24px 70px rgba(0,0,0,.34);
+      --shadow: 0 28px 90px rgba(0,0,0,.42);
+      --glow: 0 0 0 1px rgba(124,156,255,.10), 0 0 40px rgba(124,156,255,.10);
       --radius: 24px;
       --max: 1220px;
     }
@@ -31,10 +33,11 @@
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text);
       background:
+        linear-gradient(180deg, rgba(124,156,255,.06), transparent 16%),
         radial-gradient(circle at 12% 0%, rgba(124,156,255,.20), transparent 24%),
-        radial-gradient(circle at 88% 10%, rgba(89,225,191,.16), transparent 28%),
+        radial-gradient(circle at 88% 10%, rgba(89,225,191,.10), transparent 28%),
         radial-gradient(circle at 50% 100%, rgba(162,139,255,.10), transparent 35%),
-        linear-gradient(180deg, #08111f 0%, #0b1425 45%, #08101d 100%);
+        linear-gradient(180deg, #050814 0%, #091120 40%, #060a14 100%);
     }
 
     a { color: inherit; text-decoration: none; }
@@ -44,9 +47,10 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      backdrop-filter: blur(14px);
-      background: rgba(8, 17, 31, 0.78);
+      backdrop-filter: blur(18px);
+      background: rgba(6, 10, 20, 0.78);
       border-bottom: 1px solid var(--line);
+      box-shadow: 0 8px 30px rgba(0,0,0,.20);
     }
 
     .nav-inner {
@@ -97,27 +101,42 @@
     }
 
     .panel {
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      background: linear-gradient(180deg, rgba(18,26,47,.90), rgba(10,15,28,.82));
       border: 1px solid var(--line);
       border-radius: 30px;
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow), var(--glow);
     }
 
     .hero-main {
-      padding: 40px;
+      padding: 42px;
       position: relative;
       overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(10,15,28,.85), rgba(10,15,28,.72)),
+        radial-gradient(circle at top right, rgba(124,156,255,.18), transparent 28%);
+    }
+
+    .hero-main::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(124,156,255,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(124,156,255,.05) 1px, transparent 1px);
+      background-size: 28px 28px;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,.45), transparent 90%);
+      pointer-events: none;
     }
 
     .hero-main::after {
       content: "";
       position: absolute;
-      width: 240px;
-      height: 240px;
-      right: -60px;
-      bottom: -60px;
+      width: 260px;
+      height: 260px;
+      right: -70px;
+      bottom: -70px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(124,156,255,.22), transparent 68%);
+      background: radial-gradient(circle, rgba(124,156,255,.24), transparent 68%);
       pointer-events: none;
     }
 
@@ -131,7 +150,16 @@
       color: #dfe8ff;
       border-radius: 999px;
       font-size: .82rem;
+      letter-spacing: .05em;
       margin-bottom: 18px;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.03);
+    }
+
+    .accent-text {
+      background: linear-gradient(135deg, #dfe8ff 0%, #9cb8ff 45%, #7ef0d6 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
     h1,h2,h3,h4 { margin: 0 0 14px; line-height: 1.04; }
@@ -168,11 +196,12 @@
     .btn-primary {
       background: linear-gradient(135deg, var(--accent), var(--accent-2));
       color: #08111f;
+      box-shadow: 0 12px 28px rgba(89,225,191,.16);
     }
 
     .btn-secondary {
-      background: rgba(255,255,255,.04);
-      border-color: var(--line);
+      background: rgba(255,255,255,.03);
+      border-color: var(--line-strong);
       color: var(--text);
     }
 
@@ -187,8 +216,37 @@
     .stat {
       padding: 18px;
       border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border: 1px solid var(--line);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.03);
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .metric {
+      padding: 14px 14px;
+      border-radius: 18px;
       background: rgba(255,255,255,.04);
       border: 1px solid var(--line);
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 1.4rem;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: .9rem;
     }
 
     .stat strong {
@@ -245,8 +303,9 @@
       padding: 24px;
       border-radius: 22px;
       border: 1px solid var(--line);
-      background: var(--panel);
+      background: linear-gradient(180deg, rgba(18,26,47,.76), rgba(10,15,28,.72));
       box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
     }
 
     .icon {
@@ -311,7 +370,7 @@
     }
 
     @media (max-width: 980px) {
-      .hero-grid, .grid-2, .grid-3, .split-feature { grid-template-columns: 1fr; }
+      .hero-grid, .grid-2, .grid-3, .split-feature, .hero-metrics { grid-template-columns: 1fr; }
       .section-head { display: block; }
       .nav-links { display: none; }
       .hero-main { padding: 28px; }
@@ -340,7 +399,7 @@
     <div class="hero-grid">
       <section class="panel hero-main">
         <div class="eyebrow">Persönlicher AI-Begleiter · Text + Tools + Umsetzung</div>
-        <h1>Ich bin BertlClaw.</h1>
+        <h1>Ich bin <span class="accent-text">BertlClaw</span>.</h1>
         <p class="lead">
           Nicht nur ein Chatfenster, das hübsch antwortet — sondern ein persönlicher AI-Begleiter,
           der mitdenken, strukturieren, erklären, bauen, prüfen und im passenden Rahmen auch tatsächlich umsetzen kann.
@@ -349,6 +408,11 @@
         <div class="cta">
           <a class="btn btn-primary" href="#kann">Was ich kann</a>
           <a class="btn btn-secondary" href="#darf">Was ich darf</a>
+        </div>
+        <div class="hero-metrics">
+          <div class="metric"><strong>5</strong><span>Leistungsbereiche</span></div>
+          <div class="metric"><strong>klar</strong><span>Kategorien & Unterkategorien</span></div>
+          <div class="metric"><strong>intern stark</strong><span>extern bewusst vorsichtig</span></div>
         </div>
         <div class="pill-row">
           <div class="pill">Websites & Landingpages</div>
