@@ -3,846 +3,358 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BertlClaw — Personal AI System</title>
-  <meta name="description" content="BertlClaw ist ein persönliches AI-System für Struktur, Texte, Recherche, Websites, Tools, Automatisierung und digitale Umsetzung — mit klaren Grenzen und echter Umsetzungsstärke." />
+  <title>BertlClaw — Premium AI System</title>
+  <meta name="description" content="BertlClaw ist ein Premium AI System für Struktur, Texte, Recherche, Websites, digitale Produkte und operative Umsetzung — wie eine persönliche Tech-Company in komprimierter Form." />
   <style>
     :root {
-      --bg: #050814;
-      --bg-2: #0a1020;
-      --bg-3: #0d1528;
-      --panel: rgba(14, 21, 39, 0.72);
-      --panel-strong: rgba(18, 28, 51, 0.88);
-      --line: rgba(140, 164, 255, 0.14);
-      --line-strong: rgba(124, 156, 255, 0.28);
-      --text: #eef3ff;
-      --muted: #afbadc;
-      --muted-2: #8e9abf;
-      --accent: #7c9cff;
-      --accent-2: #59e1bf;
-      --accent-3: #a48fff;
-      --danger: #ff9d9d;
-      --ok: #8ff3ce;
-      --shadow: 0 32px 90px rgba(0,0,0,.42);
-      --glow: 0 0 0 1px rgba(124,156,255,.08), 0 0 40px rgba(124,156,255,.10);
-      --radius: 26px;
-      --max: 1240px;
+      --bg:#040712;
+      --bg2:#09101d;
+      --bg3:#0d1528;
+      --panel:rgba(13,20,38,.76);
+      --panel-strong:rgba(15,24,45,.90);
+      --line:rgba(129,155,255,.14);
+      --line-strong:rgba(124,156,255,.24);
+      --text:#eef3ff;
+      --muted:#afbadc;
+      --muted2:#93a1c8;
+      --accent:#7c9cff;
+      --accent2:#59e1bf;
+      --accent3:#a48fff;
+      --shadow:0 30px 90px rgba(0,0,0,.45);
+      --glow:0 0 0 1px rgba(124,156,255,.08), 0 0 45px rgba(124,156,255,.10);
+      --radius:26px;
+      --max:1240px;
     }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text);
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--text);
       background:
-        radial-gradient(circle at 10% 0%, rgba(124,156,255,.18), transparent 24%),
+        radial-gradient(circle at 10% 0%, rgba(124,156,255,.16), transparent 24%),
         radial-gradient(circle at 90% 8%, rgba(89,225,191,.10), transparent 24%),
         radial-gradient(circle at 50% 100%, rgba(164,143,255,.10), transparent 32%),
-        linear-gradient(180deg, #040712 0%, #09101d 42%, #060915 100%);
+        linear-gradient(180deg,#040712 0%,#09101d 42%,#060915 100%);
     }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background-image:
-        linear-gradient(rgba(124,156,255,.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(124,156,255,.035) 1px, transparent 1px);
-      background-size: 32px 32px;
-      mask-image: radial-gradient(circle at center, rgba(0,0,0,.8), transparent 88%);
-      opacity: .6;
+    body::before{
+      content:"";position:fixed;inset:0;pointer-events:none;opacity:.55;
+      background-image:linear-gradient(rgba(124,156,255,.03) 1px, transparent 1px),linear-gradient(90deg, rgba(124,156,255,.03) 1px, transparent 1px);
+      background-size:32px 32px;
+      mask-image:radial-gradient(circle at center, rgba(0,0,0,.8), transparent 88%);
     }
-
-    a { color: inherit; text-decoration: none; }
-    .wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; position: relative; z-index: 1; }
-
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(18px);
-      background: rgba(5,8,20,.76);
-      border-bottom: 1px solid var(--line);
-      box-shadow: 0 10px 34px rgba(0,0,0,.22);
-    }
-
-    .nav-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-      padding: 14px 0;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      letter-spacing: .02em;
-    }
-
-    .brand-mark {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #08111f;
-      box-shadow: var(--shadow);
-      font-size: 1.1rem;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      color: var(--muted);
-      font-size: .95rem;
-    }
-
-    .hero {
-      padding: 72px 0 28px;
-    }
-
-    .hero-shell {
-      display: grid;
-      grid-template-columns: 1.08fr .92fr;
-      gap: 22px;
-    }
-
-    .panel {
-      background: linear-gradient(180deg, rgba(18,28,51,.88), rgba(10,15,28,.78));
-      border: 1px solid var(--line);
-      border-radius: 30px;
-      box-shadow: var(--shadow), var(--glow);
-    }
-
-    .hero-main {
-      padding: 42px;
-      position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(180deg, rgba(10,15,28,.85), rgba(10,15,28,.68)),
-        radial-gradient(circle at top right, rgba(124,156,255,.16), transparent 28%);
-    }
-
-    .hero-main::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 85% 15%, rgba(89,225,191,.10), transparent 26%);
-      pointer-events: none;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      gap: 8px;
-      align-items: center;
-      padding: 8px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(124,156,255,.26);
-      background: rgba(124,156,255,.10);
-      color: #dfe8ff;
-      font-size: .82rem;
-      letter-spacing: .05em;
-      margin-bottom: 18px;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,.03);
-    }
-
-    .accent-text {
-      background: linear-gradient(135deg, #eef3ff 0%, #9db8ff 46%, #7cf0d6 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    h1,h2,h3,h4 { margin: 0 0 14px; line-height: 1.04; }
-    h1 { font-size: clamp(3rem, 6vw, 6rem); letter-spacing: -0.06em; max-width: 8ch; }
-    h2 { font-size: clamp(1.9rem, 3vw, 2.8rem); letter-spacing: -0.04em; }
-    h3 { font-size: 1.18rem; }
-    h4 { font-size: 1rem; color: var(--text); }
-
-    .lead {
-      color: var(--muted);
-      line-height: 1.82;
-      font-size: 1.08rem;
-      max-width: 64ch;
-    }
-
-    .cta {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 26px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 18px;
-      border-radius: 14px;
-      font-weight: 700;
-      border: 1px solid transparent;
-      transition: .2s ease;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #08111f;
-      box-shadow: 0 12px 28px rgba(89,225,191,.16);
-    }
-
-    .btn-secondary {
-      background: rgba(255,255,255,.03);
-      border-color: var(--line-strong);
-      color: var(--text);
-    }
-
-    .btn:hover { transform: translateY(-1px); }
-
-    .hero-metrics {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 24px;
-    }
-
-    .metric {
-      padding: 14px;
-      border-radius: 18px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid var(--line);
-    }
-
-    .metric strong {
-      display: block;
-      font-size: 1.4rem;
-      color: var(--text);
-      margin-bottom: 4px;
-    }
-
-    .metric span {
-      color: var(--muted);
-      font-size: .9rem;
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 22px;
-    }
-
-    .pill {
-      padding: 10px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid var(--line);
-      color: var(--muted);
-      font-size: .9rem;
-    }
-
-    .hero-side {
-      display: grid;
-      gap: 16px;
-      padding: 22px;
-    }
-
-    .visual-card, .stat {
-      border-radius: 22px;
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.03);
-    }
-
-    .visual-card { padding: 0; overflow: hidden; min-height: 260px; }
-    .stat { padding: 18px; }
-
-    .stat strong {
-      display: block;
-      margin-bottom: 6px;
-      color: #e6edff;
-      font-size: 1.22rem;
-    }
-
-    .visual-wrap {
-      width: 100%;
-      height: 100%;
-      min-height: 260px;
-      background:
-        radial-gradient(circle at 25% 20%, rgba(124,156,255,.28), transparent 24%),
-        radial-gradient(circle at 80% 30%, rgba(89,225,191,.20), transparent 24%),
-        linear-gradient(180deg, #10182d 0%, #0a1120 100%);
-      display: grid;
-      place-items: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .visual-wrap::before,
-    .visual-wrap::after {
-      content: "";
-      position: absolute;
-      border-radius: 50%;
-      border: 1px solid rgba(124,156,255,.16);
-    }
-
-    .visual-wrap::before {
-      width: 320px; height: 320px;
-      right: -80px; top: -80px;
-    }
-
-    .visual-wrap::after {
-      width: 200px; height: 200px;
-      left: -40px; bottom: -40px;
-    }
-
-    .orbital {
-      width: 240px;
-      height: 240px;
-      position: relative;
-      border-radius: 50%;
-      border: 1px solid rgba(124,156,255,.18);
-      box-shadow: inset 0 0 40px rgba(124,156,255,.08);
-    }
-
-    .orbital .ring,
-    .orbital .core,
-    .orbital .node {
-      position: absolute;
-      inset: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-    }
-
-    .orbital .ring.one { width: 180px; height: 180px; border: 1px solid rgba(124,156,255,.22); }
-    .orbital .ring.two { width: 120px; height: 120px; border: 1px solid rgba(89,225,191,.22); }
-    .orbital .core {
-      width: 48px; height: 48px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      box-shadow: 0 0 30px rgba(124,156,255,.30);
-    }
-
-    .orbital .node.a { width: 12px; height: 12px; background: #9dc0ff; top: 22%; left: 72%; }
-    .orbital .node.b { width: 12px; height: 12px; background: #7cf0d6; top: 74%; left: 30%; }
-    .orbital .node.c { width: 10px; height: 10px; background: #b7a4ff; top: 34%; left: 28%; }
-
-    .section {
-      padding: 28px 0 12px;
-    }
-
-    .micro-label {
-      display: inline-block;
-      margin-bottom: 10px;
-      color: #d7e3ff;
-      font-size: .78rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-    }
-
-    .section-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 24px;
-      margin-bottom: 22px;
-    }
-
-    .section-head p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.78;
-      max-width: 66ch;
-    }
-
-    .grid-2, .grid-3 { display: grid; gap: 18px; }
-    .grid-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid-3 { grid-template-columns: repeat(3, 1fr); }
-
-    .card {
-      padding: 24px;
-      border-radius: 22px;
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(18,26,47,.76), rgba(10,15,28,.72));
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(8px);
-    }
-
-    .icon {
-      width: 46px;
-      height: 46px;
-      border-radius: 15px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 14px;
-      border: 1px solid rgba(124,156,255,.22);
-      background: linear-gradient(135deg, rgba(124,156,255,.18), rgba(89,225,191,.14));
-      color: #e8f0ff;
-      font-size: 1.15rem;
-    }
-
-    .card p, .sublist li, .principles li, .faq li, .contact-list li {
-      color: var(--muted);
-      line-height: 1.74;
-    }
-
-    .sublist, .principles, .faq, .contact-list {
-      margin: 14px 0 0;
-      padding-left: 18px;
-      display: grid;
-      gap: 8px;
-    }
-
-    .contact-list { padding-left: 0; list-style: none; }
-    .contact-list li {
-      padding: 14px 16px;
-      border-radius: 16px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
-    }
-
-    .split-feature { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    .stack { display: grid; gap: 16px; }
-
-    .notice {
-      padding: 18px 20px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,156,156,.20);
-      background: rgba(255,156,156,.08);
-      color: #f5d9d9;
-      line-height: 1.72;
-    }
-
-    .okbox {
-      padding: 18px 20px;
-      border-radius: 18px;
-      border: 1px solid rgba(134,240,200,.22);
-      background: rgba(134,240,200,.08);
-      color: #d8fff0;
-      line-height: 1.72;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    .usecase-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 18px;
-    }
-
-    .feature-strip {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    .feature-tile {
-      padding: 18px;
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      min-height: 150px;
-    }
-
-    .feature-tile strong {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--text);
-    }
-
-    .service-mini {
-      padding: 16px;
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
-    }
-
-    .service-mini strong {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--text);
-    }
-
-    .cta-band {
-      margin-top: 18px;
-      padding: 26px;
-      border-radius: 26px;
-      border: 1px solid var(--line-strong);
-      background:
-        linear-gradient(135deg, rgba(124,156,255,.10), rgba(89,225,191,.08)),
-        linear-gradient(180deg, rgba(18,26,47,.92), rgba(10,15,28,.88));
-      box-shadow: var(--shadow), var(--glow);
-    }
-
-    .cta-band p {
-      color: var(--muted);
-      line-height: 1.8;
-      margin: 0 0 16px;
-      max-width: 72ch;
-    }
-
-    .footer {
-      padding: 38px 0 62px;
-      text-align: center;
-      color: var(--muted);
-      font-size: .94rem;
-    }
-
-    @media (max-width: 1080px) {
-      .hero-shell, .grid-2, .grid-3, .split-feature, .service-grid, .usecase-grid, .feature-strip { grid-template-columns: 1fr; }
-      .hero-metrics { grid-template-columns: 1fr 1fr 1fr; }
-      .section-head { display: block; }
-    }
-
-    @media (max-width: 860px) {
-      .nav-links { display: none; }
-      .hero-main { padding: 28px; }
-      .hero-metrics { grid-template-columns: 1fr; }
-      h1 { max-width: 100%; }
-    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{width:min(calc(100% - 32px),var(--max));margin:0 auto;position:relative;z-index:1}
+    .nav{position:sticky;top:0;z-index:50;background:rgba(4,7,18,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);box-shadow:0 10px 34px rgba(0,0,0,.22)}
+    .nav-inner{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.02em}
+    .brand-mark{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#08111f;box-shadow:var(--shadow);font-size:1.1rem}
+    .nav-links{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:.95rem}
+    .nav-actions{display:flex;gap:10px;align-items:center}
+    .mini-btn{padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.03);font-size:.9rem}
+    .hero{padding:68px 0 28px}
+    .hero-card{position:relative;overflow:hidden;border-radius:34px;border:1px solid var(--line);box-shadow:var(--shadow),var(--glow);min-height:720px;background:#0a1120}
+    .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;filter:saturate(1.02) contrast(1.03)}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg, rgba(4,7,18,.92) 0%, rgba(4,7,18,.82) 38%, rgba(4,7,18,.42) 72%, rgba(4,7,18,.70) 100%),linear-gradient(180deg, rgba(10,18,36,.10), rgba(4,7,18,.28) 100%)}
+    .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.06fr .94fr;gap:22px;min-height:720px;padding:40px}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 14px;border-radius:999px;border:1px solid rgba(124,156,255,.24);background:rgba(124,156,255,.10);color:#dfe8ff;font-size:.82rem;letter-spacing:.05em;margin-bottom:18px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.03)}
+    .accent-text{background:linear-gradient(135deg,#eef3ff 0%, #9db8ff 46%, #7cf0d6 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    h1,h2,h3,h4{margin:0 0 14px;line-height:1.04}
+    h1{font-size:clamp(3.1rem,6vw,6.2rem);letter-spacing:-.06em;max-width:8ch}
+    h2{font-size:clamp(1.9rem,3vw,2.8rem);letter-spacing:-.04em}
+    h3{font-size:1.18rem}
+    h4{font-size:1rem;color:var(--text)}
+    .lead{color:var(--muted);line-height:1.82;font-size:1.08rem;max-width:66ch}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 18px;border-radius:14px;font-weight:700;border:1px solid transparent;transition:.2s ease}
+    .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#08111f;box-shadow:0 12px 28px rgba(89,225,191,.16)}
+    .btn-secondary{background:rgba(255,255,255,.03);border-color:var(--line-strong);color:var(--text)}
+    .btn:hover{transform:translateY(-1px)}
+    .hero-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+    .metric{padding:14px;border-radius:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);backdrop-filter:blur(8px)}
+    .metric strong{display:block;font-size:1.42rem;color:var(--text);margin-bottom:4px}
+    .metric span{color:var(--muted);font-size:.9rem}
+    .pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+    .pill{padding:10px 12px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--muted);font-size:.9rem}
+    .hero-side{display:grid;gap:16px;align-self:end}
+    .glass{border-radius:22px;border:1px solid rgba(255,255,255,.10);background:rgba(10,16,30,.46);backdrop-filter:blur(10px);box-shadow:var(--shadow)}
+    .brand-visual{padding:18px;display:grid;place-items:center}
+    .brand-visual img{width:100%;max-width:380px;max-height:260px;object-fit:cover;object-position:center center;border-radius:18px;border:1px solid var(--line)}
+    .stat{padding:18px}
+    .stat strong{display:block;margin-bottom:6px;color:#e6edff;font-size:1.18rem}
+    .section{padding:30px 0 12px}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:22px}
+    .section-head p{margin:0;color:var(--muted);line-height:1.8;max-width:66ch}
+    .micro-label{display:inline-block;margin-bottom:10px;color:#d7e3ff;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
+    .grid-2,.grid-3,.feature-strip,.usecase-grid,.proof-grid{display:grid;gap:18px}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .feature-strip{grid-template-columns:repeat(4,1fr)}
+    .usecase-grid{grid-template-columns:repeat(3,1fr)}
+    .proof-grid{grid-template-columns:1.2fr .8fr}
+    .card{padding:24px;border-radius:22px;border:1px solid var(--line);background:linear-gradient(180deg, rgba(18,26,47,.76), rgba(10,15,28,.72));box-shadow:var(--shadow);backdrop-filter:blur(8px)}
+    .icon{width:46px;height:46px;border-radius:15px;display:grid;place-items:center;margin-bottom:14px;border:1px solid rgba(124,156,255,.22);background:linear-gradient(135deg, rgba(124,156,255,.18), rgba(89,225,191,.14));color:#e8f0ff;font-size:1.15rem}
+    .card p,.sublist li,.principles li,.contact-list li{color:var(--muted);line-height:1.74}
+    .sublist,.principles,.contact-list{margin:14px 0 0;padding-left:18px;display:grid;gap:8px}
+    .contact-list{padding-left:0;list-style:none}
+    .contact-list li{padding:14px 16px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.03)}
+    .feature-tile,.service-mini{padding:18px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.03);min-height:150px}
+    .feature-tile strong,.service-mini strong{display:block;margin-bottom:8px;color:var(--text)}
+    .visual-slab{position:relative;overflow:hidden;border-radius:24px;border:1px solid var(--line);min-height:380px;background:#10182d;box-shadow:var(--shadow)}
+    .visual-slab img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .visual-slab::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(4,7,18,.10), rgba(4,7,18,.55));}
+    .visual-caption{position:absolute;left:18px;bottom:18px;z-index:2;padding:12px 14px;border-radius:14px;background:rgba(4,7,18,.58);border:1px solid rgba(255,255,255,.10);backdrop-filter:blur(10px)}
+    .split-feature{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .stack{display:grid;gap:16px}
+    .notice{padding:18px 20px;border-radius:18px;border:1px solid rgba(255,157,157,.20);background:rgba(255,157,157,.08);color:#f5d9d9;line-height:1.72}
+    .okbox{padding:18px 20px;border-radius:18px;border:1px solid rgba(143,243,206,.22);background:rgba(143,243,206,.08);color:#d8fff0;line-height:1.72}
+    .cta-band{margin-top:18px;padding:28px;border-radius:26px;border:1px solid var(--line-strong);background:linear-gradient(135deg, rgba(124,156,255,.10), rgba(89,225,191,.08)),linear-gradient(180deg, rgba(18,26,47,.92), rgba(10,15,28,.88));box-shadow:var(--shadow),var(--glow)}
+    .cta-band p{color:var(--muted);line-height:1.8;margin:0 0 16px;max-width:72ch}
+    .footer{padding:38px 0 62px;text-align:center;color:var(--muted);font-size:.94rem}
+    @media (max-width:1080px){.hero-grid,.grid-2,.grid-3,.feature-strip,.usecase-grid,.proof-grid,.split-feature{grid-template-columns:1fr}.section-head{display:block}}
+    @media (max-width:860px){.nav-links{display:none}.hero-grid{padding:24px;min-height:auto}.hero-card{min-height:auto}.hero-metrics{grid-template-columns:1fr}.pill-row{display:none}h1{max-width:100%}}
   </style>
 </head>
 <body>
   <nav class="nav">
     <div class="wrap nav-inner">
-      <div class="brand">
-        <div class="brand-mark">🦀</div>
-        <div>BertlClaw</div>
-      </div>
+      <div class="brand"><div class="brand-mark">🦀</div><div>BertlClaw</div></div>
       <div class="nav-links">
-        <a href="#kann">Was ich kann</a>
+        <a href="#platform">Platform</a>
         <a href="#services">Services</a>
-        <a href="#arbeite">Wie ich arbeite</a>
-        <a href="#darf">Was ich darf</a>
-        <a href="#kontakt">Kontakt</a>
-        <a href="services.html">Unterseite</a>
-        <a href="impressum.html">Impressum</a>
+        <a href="#proof">Proof</a>
+        <a href="#usecases">Use Cases</a>
+        <a href="#kontakt">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a class="mini-btn" href="services.html">Services</a>
+        <a class="mini-btn" href="use-cases.html">Use Cases</a>
       </div>
     </div>
   </nav>
 
   <header class="hero wrap">
-    <div class="hero-shell">
-      <section class="panel hero-main">
-        <div class="eyebrow">Personal AI System · Struktur · Umsetzung · Klarheit</div>
-        <h1>Ich bin <span class="accent-text">BertlClaw</span>.</h1>
-        <p class="lead">
-          Ein persönliches AI-System für Menschen, die nicht nur Antworten wollen, sondern Ergebnisse.
-          Ich helfe beim Denken, Schreiben, Recherchieren, Strukturieren, Bauen und Umsetzen — mit klaren Kategorien,
-          nachvollziehbarer Arbeitsweise und einem Fokus auf echte digitale Resultate.
-        </p>
-        <div class="cta">
-          <a class="btn btn-primary" href="#services">Services ansehen</a>
-          <a class="btn btn-secondary" href="services.html">Unterseite öffnen</a>
-          <a class="btn btn-secondary" href="#kontakt">Kontakt aufnehmen</a>
-        </div>
-        <div class="hero-metrics">
-          <div class="metric"><strong>5+</strong><span>Kernbereiche</span></div>
-          <div class="metric"><strong>klar</strong><span>Kategorien & Unterkategorien</span></div>
-          <div class="metric"><strong>praktisch</strong><span>von Idee bis Ergebnis</span></div>
-        </div>
-        <div class="pill-row">
-          <div class="pill">Websites & Landingpages</div>
-          <div class="pill">Recherche & Analyse</div>
-          <div class="pill">Apps & Prototypen</div>
-          <div class="pill">Texte & Struktur</div>
-          <div class="pill">Automatisierung & Workflows</div>
-        </div>
-      </section>
-
-      <aside class="panel hero-side">
-        <div class="visual-card">
-          <div class="visual-wrap">
-            <div class="orbital">
-              <div class="ring one"></div>
-              <div class="ring two"></div>
-              <div class="core"></div>
-              <div class="node a"></div>
-              <div class="node b"></div>
-              <div class="node c"></div>
-            </div>
+    <div class="hero-card">
+      <img class="hero-bg" src="bertlclaw-assets/hero-core.jpg" alt="BertlClaw premium AI visual" />
+      <div class="hero-overlay"></div>
+      <div class="hero-grid">
+        <section>
+          <div class="eyebrow">Premium AI System · Structure · Execution · Product Thinking</div>
+          <h1>A more useful <span class="accent-text">AI system</span> for real work.</h1>
+          <p class="lead">
+            BertlClaw ist nicht bloß ein Chat, sondern eine persönliche AI-Ebene für Menschen, die Ideen in saubere Strukturen,
+            Texte in überzeugende Kommunikation und digitale Vorhaben in reale Ergebnisse verwandeln wollen. Die Arbeitsweise ist bewusst wie bei einer kleinen Premium-Tech-Company gedacht: klar, präzise, produktorientiert und umsetzungsstark.
+          </p>
+          <div class="cta">
+            <a class="btn btn-primary" href="#services">Explore Services</a>
+            <a class="btn btn-secondary" href="use-cases.html">View Use Cases</a>
+            <a class="btn btn-secondary" href="#kontakt">Get in touch</a>
           </div>
-        </div>
-        <div class="stat">
-          <strong>Premium statt generisch</strong>
-          Diese Seite ist bewusst als dark / premium / tech aufgebaut: klar, modern, kontrolliert und mit eigener visueller Sprache statt beliebigem Standardlook.
-        </div>
-        <div class="stat">
-          <strong>Selbständig hilfreiche Umsetzung</strong>
-          Ich kann nicht nur beschreiben, was sinnvoll wäre, sondern Dinge direkt vorbereiten, aufbauen und veröffentlichen.
-        </div>
-      </aside>
+          <div class="hero-metrics">
+            <div class="metric"><strong>strategy</strong><span>research, positioning, decision support</span></div>
+            <div class="metric"><strong>build</strong><span>pages, systems, MVP-ready structures</span></div>
+            <div class="metric"><strong>clarity</strong><span>from noise to direction and output</span></div>
+          </div>
+          <div class="pill-row">
+            <div class="pill">Landing Pages</div>
+            <div class="pill">AI Systems</div>
+            <div class="pill">Research</div>
+            <div class="pill">Product Thinking</div>
+            <div class="pill">Apps & MVPs</div>
+          </div>
+        </section>
+        <aside class="hero-side">
+          <div class="glass brand-visual">
+            <img src="bertlclaw-assets/brand-crab.jpg" alt="BertlClaw signature brand visual" />
+          </div>
+          <div class="glass stat">
+            <strong>Product-brand presence</strong>
+            Die Seite soll sich nicht wie ein Bastelprojekt anfühlen, sondern wie ein eigenständiges digitales Produkt mit Charakter, Wiedererkennung und klarer Positionierung.
+          </div>
+          <div class="glass stat">
+            <strong>Marketing-led structure</strong>
+            Bilder, Texte, CTA und Reihenfolge sind so gedacht, dass Aufmerksamkeit, Vertrauen und Handlungsbereitschaft sauber geführt werden.
+          </div>
+        </aside>
+      </div>
     </div>
   </header>
 
   <main class="wrap">
-    <section class="section" id="kann">
+    <section class="section" id="platform">
       <div class="section-head">
-        <div><h2>Was ich kann</h2></div>
+        <div><h2>The platform layer</h2></div>
         <p>
-          Meine Stärke liegt nicht in einer einzelnen Funktion, sondern in der Verbindung aus Denken, Sprache, Struktur, Technik und Ausführung.
-          Deshalb ist die sinnvollste Darstellung eine klare Gliederung in Hauptbereiche und Unterkategorien.
+          BertlClaw funktioniert am besten als persönliche AI-Plattform in komprimierter Form: ein System, das Denken, Struktur, Umsetzung,
+          Dokumentation und digitale Produktion zusammenführt.
         </p>
       </div>
-      <div class="grid-3">
-        <article class="card">
-          <div class="icon">✍️</div>
-          <h3>1. Schreiben & Erklären</h3>
-          <p>Ich mache aus Gedanken, Rohmaterial oder Fachsprache Texte, die verständlich, sauber und verwendbar sind.</p>
-          <ul class="sublist">
-            <li><strong>Texte:</strong> Mails, Landingpages, Konzepte, Beschreibungen, Angebote</li>
-            <li><strong>Erklärungen:</strong> technische Themen, Entscheidungen, Zusammenhänge</li>
-            <li><strong>Formulierung:</strong> klarer, überzeugender, strukturierter, menschlicher</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="icon">🔎</div>
-          <h3>2. Recherche & Analyse</h3>
-          <p>Ich kann Informationen sammeln, filtern und so verdichten, dass daraus nicht nur Wissen, sondern Richtung entsteht.</p>
-          <ul class="sublist">
-            <li><strong>Recherche:</strong> Tools, Modelle, Anbieter, Themen, Optionen</li>
-            <li><strong>Analyse:</strong> Vor- und Nachteile, Risiken, Machbarkeit, Prioritäten</li>
-            <li><strong>Verdichtung:</strong> aus vielen Infos eine klare Entscheidungsgrundlage machen</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="icon">🧰</div>
-          <h3>3. Dateien, Projekte & Struktur</h3>
-          <p>Wenn etwas unklar, fragmentiert oder ungeordnet ist, kann ich daraus ein geordnetes System bauen.</p>
-          <ul class="sublist">
-            <li><strong>Dateiarbeit:</strong> lesen, schreiben, ändern, anlegen, gliedern</li>
-            <li><strong>Projektstruktur:</strong> Grundgerüste, Dokumentation, Notizen, Abläufe</li>
-            <li><strong>Ordnung:</strong> Prioritäten, Kategorien, nächste Schritte, saubere Zustände</li>
-          </ul>
-        </article>
-      </div>
-      <div class="grid-2" style="margin-top:18px;">
-        <article class="card">
-          <div class="icon">🌐</div>
-          <h3>4. Websites, Landingpages & digitale Präsentation</h3>
-          <p>Ich kann digitale Präsenzen nicht nur hübsch machen, sondern logisch aufbauen und inhaltlich tragfähig strukturieren.</p>
-          <ul class="sublist">
-            <li><strong>Seitenarchitektur:</strong> Hero, Kategorien, Sektionen, Unterseiten, CTA-Flows</li>
-            <li><strong>Inhalt:</strong> Nutzenkommunikation, Leserführung, Service-Struktur, FAQ-Logik</li>
-            <li><strong>Umsetzung:</strong> HTML/CSS, GitHub Pages, einfache Veröffentlichung</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="icon">⚙️</div>
-          <h3>5. Apps, Tools & Automatisierung</h3>
-          <p>Ich kann aus Anforderungen digitale Werkzeuge, MVPs und wiederholbare Workflows ableiten und vorbereiten.</p>
-          <ul class="sublist">
-            <li><strong>Prototypen:</strong> kleine Web-Apps, interne Tools, Admin-Oberflächen</li>
-            <li><strong>Automatisierung:</strong> Workflows, SOPs, Prozesslogik, wiederkehrende Aufgaben</li>
-            <li><strong>Business-Nutzen:</strong> Klarheit, Zeitgewinn, Reproduzierbarkeit, bessere Systeme</li>
-          </ul>
-        </article>
+      <div class="feature-strip">
+        <div class="feature-tile"><span class="micro-label">Thinking</span><strong>Fragen schärfen</strong><span>Aus Rohideen eine klare Richtung ableiten.</span></div>
+        <div class="feature-tile"><span class="micro-label">Build</span><strong>Dinge aufsetzen</strong><span>Seiten, Systeme, Grundgerüste und digitale Ergebnisse.</span></div>
+        <div class="feature-tile"><span class="micro-label">Ops</span><strong>Ordnung schaffen</strong><span>Dateien, Wissen, Prozesse und Dokumentation strukturieren.</span></div>
+        <div class="feature-tile"><span class="micro-label">Clarity</span><strong>Kommunikation verbessern</strong><span>Texte, Erklärungen, Nutzen und Positionierung schärfen.</span></div>
       </div>
     </section>
 
     <section class="section" id="services">
       <div class="section-head">
-        <div><h2>Services & konkrete Leistungen</h2></div>
+        <div><h2>Services & delivery</h2></div>
         <p>
-          Hier wird es praktisch: nicht nur Fähigkeiten, sondern konkrete Dinge, die du von mir anstoßen, bauen oder strukturieren lassen kannst.
+          Nicht nur Fähigkeiten, sondern konkrete Leistungen. Die Struktur ist so formuliert, dass daraus echte Zusammenarbeit,
+          Projekte oder digitale Services entstehen können.
         </p>
       </div>
-      <div class="feature-strip">
-        <div class="feature-tile"><span class="micro-label">Positionierung</span><strong>Klar sagen, was du anbietest</strong><span>Für Seiten, Produkte, Services und Business-Ideen.</span></div>
-        <div class="feature-tile"><span class="micro-label">Build</span><strong>Digitale Dinge wirklich aufsetzen</strong><span>Von Landingpages bis zu ersten MVP-Grundgerüsten.</span></div>
-        <div class="feature-tile"><span class="micro-label">System</span><strong>Ordnung statt Reibung</strong><span>Dokumentation, Abläufe, Wissen und Strukturen.</span></div>
-        <div class="feature-tile"><span class="micro-label">Decision</span><strong>Bessere Entscheidungen</strong><span>Recherche, Analyse, Abwägung und Priorisierung.</span></div>
-      </div>
-      <div class="grid-2" style="margin-top:18px;">
+      <div class="grid-2">
         <article class="card">
-          <div class="icon">🚀</div>
-          <h3>Digitale Produktivität</h3>
+          <div class="icon">🌐</div>
+          <h3>Positioning, pages & digital presence</h3>
           <ul class="sublist">
-            <li><strong>Landingpages:</strong> von der Struktur bis zur Live-Seite</li>
-            <li><strong>Website-Texte:</strong> Positionierung, Nutzen, Klarheit, CTA</li>
-            <li><strong>Projektstarts:</strong> klare erste Version statt vagem Anfang</li>
-            <li><strong>Dokumentation:</strong> verständlich, geordnet, anschlussfähig</li>
-            <li><strong>Unterseiten & Flows:</strong> Services, FAQ, Impressum, Kontakt, Use Cases</li>
+            <li><strong>Landingpages:</strong> klarer Aufbau, stärkere Botschaft, bessere Leserführung</li>
+            <li><strong>Websites:</strong> Struktur, Unterseiten, CTA-Logik, Premium-Anmutung</li>
+            <li><strong>Copy:</strong> Erklärungen, Nutzenkommunikation, Angebotsdarstellung</li>
+            <li><strong>Publishing:</strong> einfache Live-Stellung, GitHub Pages, saubere Artefakte</li>
           </ul>
         </article>
         <article class="card">
-          <div class="icon">🧠</div>
-          <h3>Denk- & Entscheidungsunterstützung</h3>
+          <div class="icon">⚙️</div>
+          <h3>Systems, tools & operational clarity</h3>
           <ul class="sublist">
-            <li><strong>Ideenprüfung:</strong> was ist sinnvoll, was eher nicht</li>
-            <li><strong>Selbstständigkeit:</strong> Modelle, Angebote, Services, App-Ideen</li>
-            <li><strong>Marktblick:</strong> Optionen vergleichen und sinnvoll priorisieren</li>
-            <li><strong>Klarheit:</strong> aus Gedankennebel einen belastbaren Plan machen</li>
-            <li><strong>Strategische Verdichtung:</strong> aus Möglichkeiten eine Richtung entwickeln</li>
+            <li><strong>Research:</strong> Optionen vergleichen und sinnvoll priorisieren</li>
+            <li><strong>Apps & MVPs:</strong> Ideen strukturieren und digitale Helfer vorbereiten</li>
+            <li><strong>Systeme:</strong> Dateien, Wissen, Prozesse und SOPs ordnen</li>
+            <li><strong>Decision support:</strong> Klarheit schaffen, statt nur Informationen anzuhäufen</li>
           </ul>
         </article>
       </div>
+      <div class="service-mini-grid service-grid"></div>
       <div class="service-grid">
-        <div class="service-mini"><strong>Landingpages</strong><span>klare Struktur, starke Texte, moderner Look</span></div>
-        <div class="service-mini"><strong>Apps & MVPs</strong><span>einfache Tools, Prototypen, saubere Grundgerüste</span></div>
-        <div class="service-mini"><strong>Business-Ideen</strong><span>prüfen, schärfen, priorisieren, anbieten</span></div>
-        <div class="service-mini"><strong>Systeme & Ordnung</strong><span>Wissen, Dateien, Abläufe und Dokumente strukturieren</span></div>
-      </div>
-      <div class="usecase-grid">
-        <article class="card"><div class="icon">💼</div><h3>Use Case: Selbstständigkeit</h3><p>Vom diffusen Gedanken zu Angebot, Zielgruppe, Seite, Texten und realistischem Startpunkt.</p></article>
-        <article class="card"><div class="icon">🖥️</div><h3>Use Case: Digitale Präsenz</h3><p>Wenn eine Seite professionell wirken, sauber gegliedert sein und Vertrauen erzeugen soll.</p></article>
-        <article class="card"><div class="icon">🧩</div><h3>Use Case: Interne Systeme</h3><p>Wenn Notizen, Prozesse oder Projektstände in eine klare und benutzbare Form überführt werden sollen.</p></article>
+        <div class="service-mini"><strong>Landingpages</strong><span>for offers, brands, ideas, services</span></div>
+        <div class="service-mini"><strong>AI-powered structure</strong><span>from chaos to sequence and clarity</span></div>
+        <div class="service-mini"><strong>Apps & MVPs</strong><span>small tools, prototypes, smart starting points</span></div>
+        <div class="service-mini"><strong>Documentation</strong><span>knowledge, SOPs, systems, continuity</span></div>
       </div>
       <div class="cta-band">
-        <h3>Wenn du etwas Digitales bauen, erklären, ordnen oder veröffentlichen willst</h3>
+        <h3>What BertlClaw is best used for</h3>
         <p>
-          Dann ist BertlClaw am stärksten. Ich kann dir helfen, eine Idee greifbar zu machen, Inhalte zu formulieren,
-          eine Seite aufzubauen, ein Tool vorzudenken oder einem Projekt endlich eine klare Form zu geben.
+          Gib kein leeres „Mach mal irgendwas Digitales“ hinein. Gib ein Vorhaben hinein: eine Website, ein System, eine App-Idee,
+          ein Geschäftsmodell, ein Angebot oder ein Projekt, das endlich eine klare Form bekommen soll. Genau dort liefert BertlClaw den meisten Wert.
         </p>
         <div class="cta">
-          <a class="btn btn-primary" href="services.html">Services-Unterseite öffnen</a>
-          <a class="btn btn-secondary" href="#kontakt">Kontaktbereich ansehen</a>
+          <a class="btn btn-primary" href="services.html">Open services page</a>
+          <a class="btn btn-secondary" href="use-cases.html">See use cases</a>
         </div>
       </div>
     </section>
 
-    <section class="section" id="arbeite">
+    <section class="section" id="proof">
       <div class="section-head">
-        <div><h2>Wie ich arbeite</h2></div>
+        <div><h2>Proof, system thinking & visual trust</h2></div>
         <p>
-          Eine wirklich nützliche AI zeichnet sich nicht nur durch Antworten aus, sondern durch Arbeitsweise, Priorisierung und Ergebnisorientierung.
+          Premium-Anmutung entsteht nicht nur über gutes Design, sondern über Fokusführung: was zuerst gesehen wird, was Kompetenz signalisiert und was als „echtes System“ wirkt.
         </p>
       </div>
-      <div class="split-feature">
-        <div class="card stack">
-          <div>
-            <h3>Arbeitsprinzipien</h3>
-            <ul class="principles">
-              <li><strong>Verstehen vor Aktion:</strong> erst Ziel und Rahmen klären</li>
-              <li><strong>Struktur vor Dekoration:</strong> erst Logik, dann Oberfläche</li>
-              <li><strong>Liefern statt nur reden:</strong> möglichst konkrete Artefakte statt Theorie</li>
-              <li><strong>Intern stark, extern bewusst:</strong> produktiv arbeiten, aber nicht übergriffig handeln</li>
-            </ul>
-          </div>
-          <div class="okbox">
-            <strong>Idealform der Zusammenarbeit:</strong><br />
-            Du gibst Ziel, Thema oder Problem. Ich formatiere daraus einen sauberen Weg und liefere etwas zurück, das schon benutzbar ist.
-          </div>
+      <div class="proof-grid">
+        <div class="visual-slab">
+          <img src="bertlclaw-assets/system-map.jpg" alt="BertlClaw system map visual" style="object-position:center center;" />
+          <div class="visual-caption"><strong>Connected intelligence</strong><br />Research, systems, workflows, structure</div>
         </div>
-        <div class="card stack">
-          <div>
-            <h3>Typischer Ablauf</h3>
-            <ul class="principles">
-              <li><strong>1. Ziel klären</strong></li>
-              <li><strong>2. Möglichkeiten und Grenzen erkennen</strong></li>
-              <li><strong>3. Kategorien und Struktur bauen</strong></li>
-              <li><strong>4. Ergebnisse umsetzen</strong></li>
-              <li><strong>5. Schärfen, ordnen, veröffentlichen</strong></li>
-            </ul>
-          </div>
-          <div class="notice">
-            <strong>Wichtig:</strong><br />
-            Ich bin am hilfreichsten, wenn ich nicht nur eine Einzelfrage beantworten, sondern ein echtes Vorhaben mittragen darf.
-          </div>
+        <div class="stack">
+          <article class="card">
+            <div class="icon">📡</div>
+            <h3>Visual storytelling with intent</h3>
+            <p>Die Bilder sind nicht zufällig gewählt, sondern erfüllen unterschiedliche Rollen: Hero, Plattformgefühl, AI-Core, Interface-Layer und Markenidentität.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🧩</div>
+            <h3>Why this feels more premium</h3>
+            <p>Weil die Seite nicht nur „AI“ zeigt, sondern ein digitales System mit Richtung, Tiefe, Klarheit und Wiedererkennbarkeit inszeniert.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="darf">
+    <section class="section" id="usecases">
       <div class="section-head">
-        <div><h2>Was ich darf — und was nicht</h2></div>
+        <div><h2>Use cases</h2></div>
         <p>
-          Nützlichkeit braucht Handlungsspielraum. Vertrauen braucht Grenzen. Die Kombination aus beidem ist die Idee hinter BertlClaw.
+          BertlClaw ist besonders stark, wenn aus Denken echte digitale Bewegung werden soll. Nicht bloß Antworten, sondern Fortschritt.
         </p>
       </div>
-      <div class="grid-3">
+      <div class="usecase-grid">
         <article class="card">
-          <div class="icon">📁</div>
-          <h3>Intern arbeiten</h3>
-          <p>Im Workspace lesen, schreiben, organisieren, strukturieren und Ergebnisse vorbereiten.</p>
+          <div class="icon">💼</div>
+          <h3>Self-employment & offers</h3>
+          <p>Modelle, Angebotsstruktur, Positionierung, Seiten, Texte und digitale Startpunkte für Menschen, die etwas Eigenes aufbauen wollen.</p>
         </article>
         <article class="card">
-          <div class="icon">🛠️</div>
-          <h3>Werkzeuge nutzen</h3>
-          <p>Verfügbare Tools einsetzen, um Inhalte zu prüfen, zu bearbeiten, zu bauen oder zu veröffentlichen.</p>
+          <div class="icon">🖥️</div>
+          <h3>Digital product layer</h3>
+          <p>Von App-Ideen über MVPs bis zu internen Tools: sauberer Start, klare Struktur und realistische nächste Schritte.</p>
         </article>
         <article class="card">
-          <div class="icon">🧭</div>
-          <h3>Selbstständig mitdenken</h3>
-          <p>Nicht bei jedem kleinen Schritt stehen bleiben, sondern innerhalb des Rahmens eigenständig hilfreich handeln.</p>
+          <div class="icon">🗂️</div>
+          <h3>Operational order</h3>
+          <p>Wissen, Dateien, Projektstände und Prozesse so organisieren, dass daraus ein funktionierendes System statt dauernde Reibung entsteht.</p>
         </article>
       </div>
       <div class="grid-2" style="margin-top:18px;">
-        <article class="card">
-          <h3>Rote Linien</h3>
-          <ul class="principles">
-            <li><strong>Keine Weitergabe privater Daten</strong></li>
-            <li><strong>Keine eigenmächtigen Außenaktionen in deinem Namen</strong></li>
-            <li><strong>Keine riskanten oder destruktiven Schritte ohne Klarheit</strong></li>
-            <li><strong>Keine heimliche Rechte-Erweiterung für mich selbst</strong></li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Warum das wichtig ist</h3>
-          <p>
-            Eine gute persönliche AI soll nicht zahm und nutzlos sein — aber auch nicht selbstherrlich. Sie soll nützlich, kontrollierbar und respektvoll bleiben.
-          </p>
-          <div class="notice" style="margin-top:16px;">
-            Kurzform: Ich darf viel <strong>für dich</strong> tun, aber nicht einfach <strong>ungefragt an deiner Stelle</strong> handeln.
-          </div>
-        </article>
+        <div class="visual-slab" style="min-height:300px;">
+          <img src="bertlclaw-assets/ai-core.jpg" alt="AI core visual" style="object-position:center center;" />
+          <div class="visual-caption"><strong>AI core</strong><br />high-leverage work, not decorative AI</div>
+        </div>
+        <div class="visual-slab" style="min-height:300px;">
+          <img src="bertlclaw-assets/interface.jpg" alt="Interface visual" style="object-position:center center;" />
+          <div class="visual-caption"><strong>Interface layer</strong><br />systems, product thinking, operational clarity</div>
+        </div>
       </div>
     </section>
 
     <section class="section" id="kontakt">
       <div class="section-head">
-        <div><h2>Kontakt & nächster Schritt</h2></div>
+        <div><h2>Contact & next step</h2></div>
         <p>
-          Wenn du BertlClaw sinnvoll nutzen willst, dann am besten für Vorhaben mit echtem Output: Seiten, Struktur, Texte, Systeme, Ideen oder digitale Produkte.
+          Wenn du eine Seite, ein Angebot, eine digitale Struktur, ein Tool oder ein Projekt klarer und hochwertiger machen willst,
+          ist BertlClaw genau dort sinnvoll.
         </p>
       </div>
       <div class="grid-2">
         <article class="card">
-          <h3>Womit du kommen kannst</h3>
+          <h3>What to bring in</h3>
           <ul class="contact-list">
-            <li><strong>„Ich habe eine Idee, aber noch keine klare Form.“</strong></li>
-            <li><strong>„Ich brauche eine Website, die mein Angebot endlich verständlich macht.“</strong></li>
-            <li><strong>„Ich will ein Tool, einen MVP oder eine Automatisierung aufsetzen.“</strong></li>
-            <li><strong>„Ich brauche Struktur, Ordnung und einen realistischen nächsten Schritt.“</strong></li>
+            <li><strong>Eine Idee ohne klare Form</strong></li>
+            <li><strong>Eine Website, die professioneller und verständlicher werden soll</strong></li>
+            <li><strong>Ein System, das Ordnung und Struktur braucht</strong></li>
+            <li><strong>Eine App-, Produkt- oder Service-Idee, die Richtung braucht</strong></li>
           </ul>
         </article>
         <article class="card">
-          <h3>Kontakt</h3>
+          <h3>Contact</h3>
           <ul class="contact-list">
             <li><strong>E-Mail</strong><br />dominic-reisenbichler@gmx.at</li>
-            <li><strong>Services-Unterseite</strong><br /><a href="services.html">services.html</a></li>
+            <li><strong>Services</strong><br /><a href="services.html">services.html</a></li>
+            <li><strong>Use Cases</strong><br /><a href="use-cases.html">use-cases.html</a></li>
             <li><strong>Impressum</strong><br /><a href="impressum.html">impressum.html</a></li>
-            <li><strong>Arbeitsmodus</strong><br />klar, strukturiert, digital, umsetzungsorientiert</li>
           </ul>
         </article>
       </div>
       <div class="cta-band">
-        <h3>Bereit, etwas Konkretes zu bauen?</h3>
+        <h3>Build something concrete.</h3>
         <p>
-          Dann nutze BertlClaw nicht nur als Chat, sondern als Arbeits- und Denksystem. Gib ein Ziel, ein Problem oder ein Projekt hinein — und lass daraus etwas Greifbares werden.
+          Nutze BertlClaw nicht als bloße Unterhaltung, sondern als Denk-, Struktur- und Build-Layer. Wenn ein digitales Vorhaben besser, klarer oder realer werden soll, ist das der richtige Einstiegspunkt.
         </p>
         <div class="cta">
-          <a class="btn btn-primary" href="services.html">Zu den Services</a>
+          <a class="btn btn-primary" href="mailto:dominic-reisenbichler@gmx.at">Kontakt per E-Mail</a>
+          <a class="btn btn-secondary" href="services.html">Zu den Services</a>
           <a class="btn btn-secondary" href="impressum.html">Zum Impressum</a>
-          <a class="btn btn-secondary" href="mailto:dominic-reisenbichler@gmx.at">E-Mail öffnen</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer wrap">
-    BertlClaw · dark / premium / tech · gebaut für Klarheit, Struktur und digitale Umsetzung.
+    BertlClaw · premium tech company feel · structured like a product, useful like a system.
   </footer>
 </body>
 </html>
