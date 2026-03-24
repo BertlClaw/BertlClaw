@@ -49,7 +49,8 @@
     .nav{position:sticky;top:0;z-index:50;background:rgba(4,7,18,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);box-shadow:0 10px 34px rgba(0,0,0,.22)}
     .nav-inner{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:14px 0}
     .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.02em}
-    .brand-mark{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#08111f;box-shadow:var(--shadow);font-size:1.1rem}
+    .brand-mark{width:44px;height:44px;border-radius:14px;overflow:hidden;display:block;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.10)}
+    .brand-mark img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
     .nav-links{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:.95rem}
     .nav-actions{display:flex;gap:10px;align-items:center}
     .mini-btn{padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.03);font-size:.9rem}
@@ -119,7 +120,7 @@
 <body>
   <nav class="nav">
     <div class="wrap nav-inner">
-      <div class="brand"><div class="brand-mark">🦀</div><div>BertlClaw</div></div>
+      <div class="brand"><div class="brand-mark"><img src="bertlclaw-assets/brand-crab.jpg" alt="BertlClaw Brand" /></div><div>BertlClaw</div></div>
       <div class="nav-links">
         <a href="#platform">Platform</a>
         <a href="#services">Services</a>
