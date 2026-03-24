@@ -52,8 +52,8 @@
     .nav{position:sticky;top:0;z-index:50;background:rgba(4,7,18,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);box-shadow:0 10px 34px rgba(0,0,0,.22)}
     .nav-inner{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:14px 0}
     .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.02em}
-    .brand-mark{width:44px;height:44px;border-radius:14px;overflow:hidden;display:block;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.10)}
-    .brand-mark img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
+    .brand-mark{width:44px;height:44px;border-radius:14px;overflow:hidden;display:grid;place-items:center;background:linear-gradient(135deg, rgba(124,156,255,.14), rgba(110,231,216,.12));box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.10);padding:4px}
+    .brand-mark img{width:100%;height:100%;object-fit:contain;object-position:center center;display:block;border-radius:10px}
     .nav-links{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:.95rem}
     .nav-actions{display:flex;gap:10px;align-items:center}
     .mini-btn{padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.03);font-size:.9rem}
@@ -147,7 +147,9 @@
           <div class="eyebrow">Premium AI System · Structure · Execution · Product Thinking</div>
           <h1>A more useful <span class="accent-text">AI system</span> for real work.</h1>
           <div style="margin:0 0 18px; display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
-            <img src="bertlclaw-assets/logo-180.png" alt="BertlClaw Logo" style="width:74px; height:74px; border-radius:22px; border:1px solid rgba(255,255,255,.12); box-shadow:var(--shadow); object-fit:cover;" />
+            <div style="width:86px; height:86px; border-radius:24px; border:1px solid rgba(255,255,255,.12); box-shadow:var(--shadow); background:linear-gradient(135deg, rgba(124,156,255,.14), rgba(110,231,216,.12)); padding:8px; display:grid; place-items:center;">
+              <img src="bertlclaw-assets/logo-180.png" alt="BertlClaw Logo" style="width:100%; height:100%; border-radius:18px; object-fit:contain; object-position:center center; display:block;" />
+            </div>
             <div style="color:var(--muted); font-size:.95rem; line-height:1.6; max-width:34ch;">BertlClaw als eigenständige Produktmarke: klar, futuristisch, systemisch und nicht wie ein generischer AI-Chat.</div>
           </div>
           <p class="lead">
