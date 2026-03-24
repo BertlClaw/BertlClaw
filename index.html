@@ -134,8 +134,18 @@
     .okbox{padding:18px 20px;border-radius:18px;border:1px solid rgba(143,243,206,.22);background:rgba(143,243,206,.08);color:#d8fff0;line-height:1.72}
     .cta-band{margin-top:18px;padding:28px;border-radius:26px;border:1px solid var(--line-strong);background:linear-gradient(135deg, rgba(124,156,255,.10), rgba(89,225,191,.08)),linear-gradient(180deg, rgba(18,26,47,.92), rgba(10,15,28,.88));box-shadow:var(--shadow),var(--glow)}
     .cta-band p{color:var(--muted);line-height:1.8;margin:0 0 16px;max-width:72ch}
+
+    .contact-shell{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:18px}
+    .contact-form{padding:24px;border-radius:24px;border:1px solid var(--line);background:linear-gradient(180deg, rgba(18,26,47,.84), rgba(10,15,28,.76));box-shadow:var(--shadow)}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .field{display:grid;gap:8px}
+    .field.full{grid-column:1 / -1}
+    .field label{font-size:.92rem;color:#dbe5ff}
+    .field input,.field textarea,.field select{width:100%;padding:14px 14px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--text);font:inherit}
+    .field textarea{min-height:160px;resize:vertical}
+    .form-note{margin-top:12px;color:var(--muted2);font-size:.92rem;line-height:1.7}
     .footer{padding:38px 0 62px;text-align:center;color:var(--muted);font-size:.94rem}
-    @media (max-width:1080px){.hero-grid,.grid-2,.grid-3,.feature-strip,.usecase-grid,.proof-grid,.split-feature,.package-grid,.offer-grid{grid-template-columns:1fr}.section-head{display:block}}
+    @media (max-width:1080px){.hero-grid,.grid-2,.grid-3,.feature-strip,.usecase-grid,.proof-grid,.split-feature,.package-grid,.offer-grid,.contact-shell,.form-grid{grid-template-columns:1fr}.section-head{display:block}}
     @media (max-width:860px){.nav-links{display:none}.hero-grid{padding:24px;min-height:auto}.hero-card{min-height:auto}.hero-metrics{grid-template-columns:1fr}.pill-row{display:none}h1{max-width:100%}}
   </style>
   <script type="application/ld+json">
@@ -448,23 +458,50 @@
           ist BertlClaw genau dort sinnvoll.
         </p>
       </div>
-      <div class="grid-2">
+      <div class="contact-shell">
+        <article class="contact-form">
+          <h3>Kontaktformular</h3>
+          <form id="contactForm">
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Dein Name" required />
+              </div>
+              <div class="field">
+                <label for="email">E-Mail</label>
+                <input id="email" name="email" type="email" placeholder="deine@email.at" required />
+              </div>
+              <div class="field full">
+                <label for="topic">Thema</label>
+                <select id="topic" name="topic">
+                  <option>Landingpage Sprint</option>
+                  <option>Positionierung & Website-Texte</option>
+                  <option>Digital Clarity Setup</option>
+                  <option>Allgemeine Anfrage</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="message">Nachricht</label>
+                <textarea id="message" name="message" placeholder="Worum geht es? Was ist deine Ausgangslage und was soll besser werden?" required></textarea>
+              </div>
+            </div>
+            <div class="cta">
+              <button class="btn btn-primary" type="submit">Anfrage per E-Mail öffnen</button>
+              <a class="btn btn-secondary" href="mailto:dominic-reisenbichler@gmx.at">Direkt mailen</a>
+            </div>
+            <div class="form-note">
+              Aktuell funktioniert das Formular sofort als <strong>Mailto-Version</strong>. Die Struktur ist bewusst schon so gebaut, dass wir sie später leicht auf <strong>Formspree</strong> umstellen können.
+            </div>
+          </form>
+        </article>
         <article class="card">
-          <h3>What to bring in</h3>
+          <h3>Was du senden kannst</h3>
           <ul class="contact-list">
             <li><strong>Eine Idee ohne klare Form</strong></li>
             <li><strong>Eine Website, die professioneller und verständlicher werden soll</strong></li>
             <li><strong>Ein System, das Ordnung und Struktur braucht</strong></li>
             <li><strong>Eine App-, Produkt- oder Service-Idee, die Richtung braucht</strong></li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Kontakt</h3>
-          <ul class="contact-list">
             <li><strong>E-Mail</strong><br />dominic-reisenbichler@gmx.at</li>
-            <li><strong>Leistungen</strong><br /><a href="services.html">Landingpages, Website-Texte, KI-Struktur</a></li>
-            <li><strong>Anwendungsfälle</strong><br /><a href="use-cases.html">Use Cases für Selbstständige und digitale Projekte</a></li>
-            <li><strong>Impressum</strong><br /><a href="impressum.html">rechtliche Angaben</a></li>
           </ul>
         </article>
       </div>
@@ -489,6 +526,33 @@
   <footer class="footer wrap">
     BertlClaw · premium tech company feel · structured like a product, useful like a system.
   </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const topic = document.getElementById('topic').value.trim();
+        const message = document.getElementById('message').value.trim();
+        const subject = encodeURIComponent('BertlClaw Anfrage – ' + topic);
+        const body = encodeURIComponent(
+          'Name: ' + name + '
+' +
+          'E-Mail: ' + email + '
+' +
+          'Thema: ' + topic + '
+
+' +
+          'Nachricht:
+' + message + '
+'
+        );
+        window.location.href = 'mailto:dominic-reisenbichler@gmx.at?subject=' + subject + '&body=' + body;
+      });
+    }
+  </script>
 </body>
 </html>
 >
