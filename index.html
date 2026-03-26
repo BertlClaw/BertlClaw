@@ -603,10 +603,19 @@ Das Formular ist jetzt direkt mit <strong>Formspree</strong> verbunden und kann 
         <button type="button" data-answer="preise">Was passt für mich?</button>
         <button type="button" data-answer="kontakt">Direkt Kontakt</button>
       </div>
+      <div class="chatbot-input">
+        <textarea id="chatbotMessage" placeholder="Schreib kurz, worum es geht — zum Beispiel: Ich brauche eine Landingpage für mein Angebot."></textarea>
+        <div class="chatbot-row">
+          <a href="https://t.me/BertlClaw_Bot" id="chatbotTelegram" target="_blank" rel="noopener">An Telegram senden</a>
+          <a href="mailto:dominic-reisenbichler@gmx.at?subject=BertlClaw%20Anfrage" id="chatbotMail">Per E-Mail senden</a>
+        </div>
+        <div class="chatbot-row">
+          <button type="button" id="chatbotToForm">Ins Kontaktformular übernehmen</button>
+          <a href="#contact">Zum Kontaktformular</a>
+        </div>
+      </div>
       <div class="chatbot-links">
         <a href="https://t.me/BertlClaw_Bot" target="_blank" rel="noopener">Mit BertlClaw auf Telegram schreiben</a>
-        <a href="mailto:dominic-reisenbichler@gmx.at?subject=BertlClaw%20Anfrage">Per E-Mail anfragen</a>
-        <a href="#contact">Zum Kontaktformular</a>
       </div>
     </div>
   </aside>
@@ -624,6 +633,10 @@ Das Formular ist jetzt direkt mit <strong>Formspree</strong> verbunden und kann 
         preise:'Der einfachste Weg: kurz schreiben, worum es geht. Danach lässt sich schnell einschätzen, welches Einstiegsangebot am besten passt.',
         kontakt:'Du kannst direkt unten das Formular nutzen, eine E-Mail schreiben oder BertlClaw auf Telegram öffnen.'
       };
+      const input=document.getElementById('chatbotMessage');
+      const telegramLink=document.getElementById('chatbotTelegram');
+      const mailLink=document.getElementById('chatbotMail');
+      const toForm=document.getElementById('chatbotToForm');
       function setOpen(open){
         panel.classList.toggle('open',open);
         panel.setAttribute('aria-hidden', String(!open));
@@ -636,15 +649,35 @@ Das Formular ist jetzt direkt mit <strong>Formspree</strong> verbunden und kann 
         body.appendChild(div);
         body.scrollTop=body.scrollHeight;
       }
+      function updateLinks(){
+        const msg=(input.value||'').trim();
+        const fallback='Hallo, ich interessiere mich für BertlClaw.';
+        const text=encodeURIComponent(msg || fallback);
+        telegramLink.href='https://t.me/BertlClaw_Bot?start=' + encodeURIComponent('website') + '&text=' + text;
+        mailLink.href='mailto:dominic-reisenbichler@gmx.at?subject=' + encodeURIComponent('BertlClaw Anfrage') + '&body=' + text;
+      }
       toggle.addEventListener('click',()=>setOpen(!panel.classList.contains('open')));
       close.addEventListener('click',()=>setOpen(false));
+      input.addEventListener('input', updateLinks);
+      toForm.addEventListener('click',()=>{
+        const form=document.getElementById('contactForm');
+        const textarea=form ? form.querySelector('textarea[name="message"]') : null;
+        if(textarea){
+          textarea.value=input.value || 'Hallo, ich interessiere mich für BertlClaw.';
+          location.hash='contact';
+        }
+      });
       document.querySelectorAll('[data-answer]').forEach(btn=>{
         btn.addEventListener('click',()=>{
           const key=btn.getAttribute('data-answer');
           addMsg(btn.textContent,'user');
-          addMsg(answers[key],'bot');
+          const answer=answers[key];
+          addMsg(answer,'bot');
+          input.value=btn.textContent + ': ' + answer;
+          updateLinks();
         });
       });
+      updateLinks();
     })();
   </script>
 
@@ -674,10 +707,19 @@ r>
         <button type="button" data-answer="preise">Was passt für mich?</button>
         <button type="button" data-answer="kontakt">Direkt Kontakt</button>
       </div>
+      <div class="chatbot-input">
+        <textarea id="chatbotMessage" placeholder="Schreib kurz, worum es geht — zum Beispiel: Ich brauche eine Landingpage für mein Angebot."></textarea>
+        <div class="chatbot-row">
+          <a href="https://t.me/BertlClaw_Bot" id="chatbotTelegram" target="_blank" rel="noopener">An Telegram senden</a>
+          <a href="mailto:dominic-reisenbichler@gmx.at?subject=BertlClaw%20Anfrage" id="chatbotMail">Per E-Mail senden</a>
+        </div>
+        <div class="chatbot-row">
+          <button type="button" id="chatbotToForm">Ins Kontaktformular übernehmen</button>
+          <a href="#contact">Zum Kontaktformular</a>
+        </div>
+      </div>
       <div class="chatbot-links">
         <a href="https://t.me/BertlClaw_Bot" target="_blank" rel="noopener">Mit BertlClaw auf Telegram schreiben</a>
-        <a href="mailto:dominic-reisenbichler@gmx.at?subject=BertlClaw%20Anfrage">Per E-Mail anfragen</a>
-        <a href="#contact">Zum Kontaktformular</a>
       </div>
     </div>
   </aside>
@@ -695,6 +737,10 @@ r>
         preise:'Der einfachste Weg: kurz schreiben, worum es geht. Danach lässt sich schnell einschätzen, welches Einstiegsangebot am besten passt.',
         kontakt:'Du kannst direkt unten das Formular nutzen, eine E-Mail schreiben oder BertlClaw auf Telegram öffnen.'
       };
+      const input=document.getElementById('chatbotMessage');
+      const telegramLink=document.getElementById('chatbotTelegram');
+      const mailLink=document.getElementById('chatbotMail');
+      const toForm=document.getElementById('chatbotToForm');
       function setOpen(open){
         panel.classList.toggle('open',open);
         panel.setAttribute('aria-hidden', String(!open));
@@ -707,15 +753,35 @@ r>
         body.appendChild(div);
         body.scrollTop=body.scrollHeight;
       }
+      function updateLinks(){
+        const msg=(input.value||'').trim();
+        const fallback='Hallo, ich interessiere mich für BertlClaw.';
+        const text=encodeURIComponent(msg || fallback);
+        telegramLink.href='https://t.me/BertlClaw_Bot?start=' + encodeURIComponent('website') + '&text=' + text;
+        mailLink.href='mailto:dominic-reisenbichler@gmx.at?subject=' + encodeURIComponent('BertlClaw Anfrage') + '&body=' + text;
+      }
       toggle.addEventListener('click',()=>setOpen(!panel.classList.contains('open')));
       close.addEventListener('click',()=>setOpen(false));
+      input.addEventListener('input', updateLinks);
+      toForm.addEventListener('click',()=>{
+        const form=document.getElementById('contactForm');
+        const textarea=form ? form.querySelector('textarea[name="message"]') : null;
+        if(textarea){
+          textarea.value=input.value || 'Hallo, ich interessiere mich für BertlClaw.';
+          location.hash='contact';
+        }
+      });
       document.querySelectorAll('[data-answer]').forEach(btn=>{
         btn.addEventListener('click',()=>{
           const key=btn.getAttribute('data-answer');
           addMsg(btn.textContent,'user');
-          addMsg(answers[key],'bot');
+          const answer=answers[key];
+          addMsg(answer,'bot');
+          input.value=btn.textContent + ': ' + answer;
+          updateLinks();
         });
       });
+      updateLinks();
     })();
   </script>
 
