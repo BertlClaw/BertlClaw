@@ -587,15 +587,15 @@ Das Formular ist jetzt direkt mit <strong>Formspree</strong> verbunden und kann 
 
   
 
-  <button class="chatbot-toggle" id="chatbotToggle" aria-expanded="false" aria-controls="chatbotPanel">Chat starten</button>
+  <button class="chatbot-toggle" id="chatbotToggle" aria-expanded="false" aria-controls="chatbotPanel">Mit BertlClaw chatten</button>
   <aside class="chatbot-panel" id="chatbotPanel" aria-hidden="true">
     <div class="chatbot-head">
-      <div><strong>BertlClaw Chat</strong><span>Schnelle Antworten & direkter Kontakt</span></div>
+      <div><strong>Mit BertlClaw chatten</strong><span>Direkt zum echten BertlClaw-Chat auf Telegram</span></div>
       <button class="chatbot-close" id="chatbotClose" aria-label="Chat schließen">×</button>
     </div>
     <div class="chatbot-body" id="chatbotBody">
-      <div class="chatbot-msg bot">Hi — ich bin der schnelle Website-Chat für BertlClaw. Ich beantworte typische Fragen sofort und leite dich bei Bedarf direkt zur Anfrage weiter.</div>
-      <div class="chatbot-msg bot">Wobei geht es dir gerade?</div>
+      <div class="chatbot-msg bot">Hi — hier bekommst du einen schnellen Einstieg. Für den echten freien KI-Chat mit BertlClaw wechselst du direkt zu Telegram.</div>
+      <div class="chatbot-msg bot">Du kannst hier kurz vorqualifizieren oder direkt in den echten Chat wechseln.</div>
       <div class="chatbot-quick">
         <button type="button" data-answer="landingpage">Landingpage</button>
         <button type="button" data-answer="texte">Website-Texte</button>
@@ -606,7 +606,7 @@ Das Formular ist jetzt direkt mit <strong>Formspree</strong> verbunden und kann 
       <div class="chatbot-input">
         <textarea id="chatbotMessage" placeholder="Schreib kurz, worum es geht — zum Beispiel: Ich brauche eine Landingpage für mein Angebot."></textarea>
         <div class="chatbot-row">
-          <a href="https://t.me/BertlClaw_Bot" id="chatbotTelegram" target="_blank" rel="noopener">An Telegram senden</a>
+          <a href="https://t.me/BertlClaw_Bot" id="chatbotTelegram" target="_blank" rel="noopener">Zum echten BertlClaw-Chat</a>
           <a href="mailto:dominic-reisenbichler@gmx.at?subject=BertlClaw%20Anfrage" id="chatbotMail">Per E-Mail senden</a>
         </div>
         <div class="chatbot-row">
@@ -615,7 +615,7 @@ Das Formular ist jetzt direkt mit <strong>Formspree</strong> verbunden und kann 
         </div>
       </div>
       <div class="chatbot-links">
-        <a href="https://t.me/BertlClaw_Bot" target="_blank" rel="noopener">Mit BertlClaw auf Telegram schreiben</a>
+        <a href="https://t.me/BertlClaw_Bot" target="_blank" rel="noopener">Direkt mit BertlClaw auf Telegram schreiben</a>
       </div>
     </div>
   </aside>
@@ -651,9 +651,9 @@ Das Formular ist jetzt direkt mit <strong>Formspree</strong> verbunden und kann 
       }
       function updateLinks(){
         const msg=(input.value||'').trim();
-        const fallback='Hallo, ich interessiere mich für BertlClaw.';
+        const fallback='Hallo, ich interessiere mich für BertlClaw und habe eine Frage.';
         const text=encodeURIComponent(msg || fallback);
-        telegramLink.href='https://t.me/BertlClaw_Bot?start=' + encodeURIComponent('website') + '&text=' + text;
+        telegramLink.href='https://t.me/BertlClaw_Bot';
         mailLink.href='mailto:dominic-reisenbichler@gmx.at?subject=' + encodeURIComponent('BertlClaw Anfrage') + '&body=' + text;
       }
       toggle.addEventListener('click',()=>setOpen(!panel.classList.contains('open')));
@@ -691,15 +691,15 @@ r>
 
   
 
-  <button class="chatbot-toggle" id="chatbotToggle" aria-expanded="false" aria-controls="chatbotPanel">Chat starten</button>
+  <button class="chatbot-toggle" id="chatbotToggle" aria-expanded="false" aria-controls="chatbotPanel">Mit BertlClaw chatten</button>
   <aside class="chatbot-panel" id="chatbotPanel" aria-hidden="true">
     <div class="chatbot-head">
-      <div><strong>BertlClaw Chat</strong><span>Schnelle Antworten & direkter Kontakt</span></div>
+      <div><strong>Mit BertlClaw chatten</strong><span>Direkt zum echten BertlClaw-Chat auf Telegram</span></div>
       <button class="chatbot-close" id="chatbotClose" aria-label="Chat schließen">×</button>
     </div>
     <div class="chatbot-body" id="chatbotBody">
-      <div class="chatbot-msg bot">Hi — ich bin der schnelle Website-Chat für BertlClaw. Ich beantworte typische Fragen sofort und leite dich bei Bedarf direkt zur Anfrage weiter.</div>
-      <div class="chatbot-msg bot">Wobei geht es dir gerade?</div>
+      <div class="chatbot-msg bot">Hi — hier bekommst du einen schnellen Einstieg. Für den echten freien KI-Chat mit BertlClaw wechselst du direkt zu Telegram.</div>
+      <div class="chatbot-msg bot">Du kannst hier kurz vorqualifizieren oder direkt in den echten Chat wechseln.</div>
       <div class="chatbot-quick">
         <button type="button" data-answer="landingpage">Landingpage</button>
         <button type="button" data-answer="texte">Website-Texte</button>
@@ -710,7 +710,7 @@ r>
       <div class="chatbot-input">
         <textarea id="chatbotMessage" placeholder="Schreib kurz, worum es geht — zum Beispiel: Ich brauche eine Landingpage für mein Angebot."></textarea>
         <div class="chatbot-row">
-          <a href="https://t.me/BertlClaw_Bot" id="chatbotTelegram" target="_blank" rel="noopener">An Telegram senden</a>
+          <a href="https://t.me/BertlClaw_Bot" id="chatbotTelegram" target="_blank" rel="noopener">Zum echten BertlClaw-Chat</a>
           <a href="mailto:dominic-reisenbichler@gmx.at?subject=BertlClaw%20Anfrage" id="chatbotMail">Per E-Mail senden</a>
         </div>
         <div class="chatbot-row">
@@ -719,7 +719,7 @@ r>
         </div>
       </div>
       <div class="chatbot-links">
-        <a href="https://t.me/BertlClaw_Bot" target="_blank" rel="noopener">Mit BertlClaw auf Telegram schreiben</a>
+        <a href="https://t.me/BertlClaw_Bot" target="_blank" rel="noopener">Direkt mit BertlClaw auf Telegram schreiben</a>
       </div>
     </div>
   </aside>
@@ -755,9 +755,9 @@ r>
       }
       function updateLinks(){
         const msg=(input.value||'').trim();
-        const fallback='Hallo, ich interessiere mich für BertlClaw.';
+        const fallback='Hallo, ich interessiere mich für BertlClaw und habe eine Frage.';
         const text=encodeURIComponent(msg || fallback);
-        telegramLink.href='https://t.me/BertlClaw_Bot?start=' + encodeURIComponent('website') + '&text=' + text;
+        telegramLink.href='https://t.me/BertlClaw_Bot';
         mailLink.href='mailto:dominic-reisenbichler@gmx.at?subject=' + encodeURIComponent('BertlClaw Anfrage') + '&body=' + text;
       }
       toggle.addEventListener('click',()=>setOpen(!panel.classList.contains('open')));
