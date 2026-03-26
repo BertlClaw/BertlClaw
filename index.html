@@ -586,6 +586,68 @@ Das Formular ist jetzt direkt mit <strong>Formspree</strong> verbunden und kann 
   </footer>
 
   
+
+  <button class="chatbot-toggle" id="chatbotToggle" aria-expanded="false" aria-controls="chatbotPanel">Chat starten</button>
+  <aside class="chatbot-panel" id="chatbotPanel" aria-hidden="true">
+    <div class="chatbot-head">
+      <div><strong>BertlClaw Chat</strong><span>Schnelle Antworten & direkter Kontakt</span></div>
+      <button class="chatbot-close" id="chatbotClose" aria-label="Chat schließen">×</button>
+    </div>
+    <div class="chatbot-body" id="chatbotBody">
+      <div class="chatbot-msg bot">Hi — ich bin der schnelle Website-Chat für BertlClaw. Ich beantworte typische Fragen sofort und leite dich bei Bedarf direkt zur Anfrage weiter.</div>
+      <div class="chatbot-msg bot">Wobei geht es dir gerade?</div>
+      <div class="chatbot-quick">
+        <button type="button" data-answer="landingpage">Landingpage</button>
+        <button type="button" data-answer="texte">Website-Texte</button>
+        <button type="button" data-answer="ordnung">Digitale Ordnung</button>
+        <button type="button" data-answer="preise">Was passt für mich?</button>
+        <button type="button" data-answer="kontakt">Direkt Kontakt</button>
+      </div>
+      <div class="chatbot-links">
+        <a href="https://t.me/BertlClaw_Bot" target="_blank" rel="noopener">Mit BertlClaw auf Telegram schreiben</a>
+        <a href="mailto:dominic-reisenbichler@gmx.at?subject=BertlClaw%20Anfrage">Per E-Mail anfragen</a>
+        <a href="#contact">Zum Kontaktformular</a>
+      </div>
+    </div>
+  </aside>
+
+  <script>
+    (function(){
+      const panel=document.getElementById('chatbotPanel');
+      const toggle=document.getElementById('chatbotToggle');
+      const close=document.getElementById('chatbotClose');
+      const body=document.getElementById('chatbotBody');
+      const answers={
+        landingpage:'Für eine Landingpage ist meist der Landingpage Sprint der beste Einstieg: klare Struktur, stärkere Texte und eine Angebotsseite, die verständlicher wirkt. Schau dir dafür den Landingpage Sprint an oder schreib direkt eine kurze Anfrage.',
+        texte:'Wenn dein Angebot gut ist, aber auf der Website noch zu vage oder austauschbar klingt, ist Positionierung & Website-Texte meistens der richtige Startpunkt.',
+        ordnung:'Wenn Dateien, Themen, Projekte oder Prozesse zu chaotisch geworden sind, passt Digitale Ordnung & Klarheit: Struktur, Prioritäten und ein sinnvoller Startpunkt.',
+        preise:'Der einfachste Weg: kurz schreiben, worum es geht. Danach lässt sich schnell einschätzen, welches Einstiegsangebot am besten passt.',
+        kontakt:'Du kannst direkt unten das Formular nutzen, eine E-Mail schreiben oder BertlClaw auf Telegram öffnen.'
+      };
+      function setOpen(open){
+        panel.classList.toggle('open',open);
+        panel.setAttribute('aria-hidden', String(!open));
+        toggle.setAttribute('aria-expanded', String(open));
+      }
+      function addMsg(text, cls){
+        const div=document.createElement('div');
+        div.className='chatbot-msg '+cls;
+        div.textContent=text;
+        body.appendChild(div);
+        body.scrollTop=body.scrollHeight;
+      }
+      toggle.addEventListener('click',()=>setOpen(!panel.classList.contains('open')));
+      close.addEventListener('click',()=>setOpen(false));
+      document.querySelectorAll('[data-answer]').forEach(btn=>{
+        btn.addEventListener('click',()=>{
+          const key=btn.getAttribute('data-answer');
+          addMsg(btn.textContent,'user');
+          addMsg(answers[key],'bot');
+        });
+      });
+    })();
+  </script>
+
 </body>
 </html>
 >
@@ -595,6 +657,68 @@ Das Formular ist jetzt direkt mit <strong>Formspree</strong> verbunden und kann 
 r>
 
   
+
+  <button class="chatbot-toggle" id="chatbotToggle" aria-expanded="false" aria-controls="chatbotPanel">Chat starten</button>
+  <aside class="chatbot-panel" id="chatbotPanel" aria-hidden="true">
+    <div class="chatbot-head">
+      <div><strong>BertlClaw Chat</strong><span>Schnelle Antworten & direkter Kontakt</span></div>
+      <button class="chatbot-close" id="chatbotClose" aria-label="Chat schließen">×</button>
+    </div>
+    <div class="chatbot-body" id="chatbotBody">
+      <div class="chatbot-msg bot">Hi — ich bin der schnelle Website-Chat für BertlClaw. Ich beantworte typische Fragen sofort und leite dich bei Bedarf direkt zur Anfrage weiter.</div>
+      <div class="chatbot-msg bot">Wobei geht es dir gerade?</div>
+      <div class="chatbot-quick">
+        <button type="button" data-answer="landingpage">Landingpage</button>
+        <button type="button" data-answer="texte">Website-Texte</button>
+        <button type="button" data-answer="ordnung">Digitale Ordnung</button>
+        <button type="button" data-answer="preise">Was passt für mich?</button>
+        <button type="button" data-answer="kontakt">Direkt Kontakt</button>
+      </div>
+      <div class="chatbot-links">
+        <a href="https://t.me/BertlClaw_Bot" target="_blank" rel="noopener">Mit BertlClaw auf Telegram schreiben</a>
+        <a href="mailto:dominic-reisenbichler@gmx.at?subject=BertlClaw%20Anfrage">Per E-Mail anfragen</a>
+        <a href="#contact">Zum Kontaktformular</a>
+      </div>
+    </div>
+  </aside>
+
+  <script>
+    (function(){
+      const panel=document.getElementById('chatbotPanel');
+      const toggle=document.getElementById('chatbotToggle');
+      const close=document.getElementById('chatbotClose');
+      const body=document.getElementById('chatbotBody');
+      const answers={
+        landingpage:'Für eine Landingpage ist meist der Landingpage Sprint der beste Einstieg: klare Struktur, stärkere Texte und eine Angebotsseite, die verständlicher wirkt. Schau dir dafür den Landingpage Sprint an oder schreib direkt eine kurze Anfrage.',
+        texte:'Wenn dein Angebot gut ist, aber auf der Website noch zu vage oder austauschbar klingt, ist Positionierung & Website-Texte meistens der richtige Startpunkt.',
+        ordnung:'Wenn Dateien, Themen, Projekte oder Prozesse zu chaotisch geworden sind, passt Digitale Ordnung & Klarheit: Struktur, Prioritäten und ein sinnvoller Startpunkt.',
+        preise:'Der einfachste Weg: kurz schreiben, worum es geht. Danach lässt sich schnell einschätzen, welches Einstiegsangebot am besten passt.',
+        kontakt:'Du kannst direkt unten das Formular nutzen, eine E-Mail schreiben oder BertlClaw auf Telegram öffnen.'
+      };
+      function setOpen(open){
+        panel.classList.toggle('open',open);
+        panel.setAttribute('aria-hidden', String(!open));
+        toggle.setAttribute('aria-expanded', String(open));
+      }
+      function addMsg(text, cls){
+        const div=document.createElement('div');
+        div.className='chatbot-msg '+cls;
+        div.textContent=text;
+        body.appendChild(div);
+        body.scrollTop=body.scrollHeight;
+      }
+      toggle.addEventListener('click',()=>setOpen(!panel.classList.contains('open')));
+      close.addEventListener('click',()=>setOpen(false));
+      document.querySelectorAll('[data-answer]').forEach(btn=>{
+        btn.addEventListener('click',()=>{
+          const key=btn.getAttribute('data-answer');
+          addMsg(btn.textContent,'user');
+          addMsg(answers[key],'bot');
+        });
+      });
+    })();
+  </script>
+
 </body>
 </html>
 >
