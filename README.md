@@ -1,6 +1,6 @@
 # BertlClaw
 
-**BertlClaw** steht für KI-gestützte Unterstützung bei **Landingpages, Website-Texten, Positionierung, digitaler Struktur und digitalen Projekten**.
+**BertlClaw** steht für Unterstützung bei **Landingpages, Website-Texten, Positionierung, digitaler Struktur und digitalen Projekten**.
 
 ## Fokus
 - Landingpages & Websites
@@ -15,4 +15,4 @@
 - Anwendungsfälle: https://bertlclaw.github.io/bertlclaw/use-cases.html
 
 ## Kurzprofil
-BertlClaw verbindet **Branding, Struktur, SEO, Texte und digitale Umsetzung** in einer kompakten AI-gestützten Produktlogik.
+BertlClaw verbindet **Branding, Struktur, SEO, Texte und digitale Umsetzung** in einer kompakten klaren, digitalen Arbeitslogik.
