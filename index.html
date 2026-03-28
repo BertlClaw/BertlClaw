@@ -11,6 +11,9 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bertlclaw.github.io/bertlclaw/" />
   <meta property="og:image" content="https://bertlclaw.github.io/bertlclaw/bertlclaw-assets/logo-512.png" />
+  <meta property="og:site_name" content="BertlClaw" />
+  <meta property="og:locale" content="de_AT" />
+  <meta name="twitter:image" content="https://bertlclaw.github.io/bertlclaw/bertlclaw-assets/logo-512.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="BertlClaw – Landingpages, Websites, Struktur & digitale Projekte" />
   <meta name="twitter:description" content="BertlClaw hilft bei Landingpages, Website-Texten, digitaler Struktur und digitalen Projekten." />
@@ -172,6 +175,7 @@
     "@graph": [
       {
         "@type": "Person",
+        "@id": "https://bertlclaw.github.io/bertlclaw/#person",
         "name": "Dominic Reisenbichler",
         "email": "mailto:dominic.reisenbichler@gmx.at",
         "address": {
@@ -183,20 +187,46 @@
         }
       },
       {
-        "@type": "WebSite",
+        "@type": "Organization",
+        "@id": "https://bertlclaw.github.io/bertlclaw/#organization",
         "name": "BertlClaw",
         "url": "https://bertlclaw.github.io/bertlclaw/",
-        "description": "BertlClaw hilft Selbstständigen, Dienstleistern und kleinen Unternehmen bei Landingpages, Website-Texten, digitaler Struktur und digitalen Projekten."
+        "logo": "https://bertlclaw.github.io/bertlclaw/bertlclaw-assets/logo-512.png",
+        "image": "https://bertlclaw.github.io/bertlclaw/bertlclaw-assets/logo-512.png",
+        "sameAs": [
+          "https://github.com/BertlClaw",
+          "https://github.com/BertlClaw/bertlclaw"
+        ],
+        "founder": {
+          "@id": "https://bertlclaw.github.io/bertlclaw/#person"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://bertlclaw.github.io/bertlclaw/#website",
+        "name": "BertlClaw",
+        "url": "https://bertlclaw.github.io/bertlclaw/",
+        "description": "BertlClaw hilft Selbstständigen, Dienstleistern und kleinen Unternehmen bei Landingpages, Website-Texten, digitaler Struktur und digitalen Projekten.",
+        "publisher": {
+          "@id": "https://bertlclaw.github.io/bertlclaw/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://bertlclaw.github.io/bertlclaw/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
       },
       {
         "@type": "ProfessionalService",
+        "@id": "https://bertlclaw.github.io/bertlclaw/#service",
         "name": "BertlClaw",
         "url": "https://bertlclaw.github.io/bertlclaw/",
         "description": "Landingpages, Websites, Positionierung, digitale Struktur und digitale Projekte.",
-        "areaServed": "AT",
+        "areaServed": ["AT","DE","CH"],
+        "logo": "https://bertlclaw.github.io/bertlclaw/bertlclaw-assets/logo-512.png",
+        "image": "https://bertlclaw.github.io/bertlclaw/bertlclaw-assets/logo-512.png",
         "provider": {
-          "@type": "Person",
-          "name": "Dominic Reisenbichler"
+          "@id": "https://bertlclaw.github.io/bertlclaw/#organization"
         }
       }
     ]

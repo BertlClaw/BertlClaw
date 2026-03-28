@@ -15,4 +15,11 @@
 - Anwendungsfälle: https://bertlclaw.github.io/bertlclaw/use-cases.html
 
 ## Kurzprofil
-BertlClaw verbindet **Branding, Struktur, SEO, Texte und digitale Umsetzung** in einer kompakten klaren, digitalen Arbeitslogik.
+BertlClaw ist ein deutschsprachiges Angebot von Dominic Reisenbichler für Landingpages, Website-Texte, Positionierung, digitale Struktur und digitale Projekte. Der Schwerpunkt liegt auf klarer Kommunikation, sinnvoller Struktur und praktischer Umsetzung für Selbstständige, Dienstleister, Gründer und kleine Unternehmen.
+
+## Brand-Signale
+- Name: **BertlClaw**
+- Betreiber: **Dominic Reisenbichler**
+- Website: https://bertlclaw.github.io/bertlclaw/
+- GitHub-Profil: https://github.com/BertlClaw
+- Repository: https://github.com/BertlClaw/bertlclaw
