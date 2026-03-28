@@ -23,3 +23,9 @@ BertlClaw ist ein deutschsprachiges Angebot von Dominic Reisenbichler für Landi
 - Website: https://bertlclaw.github.io/bertlclaw/
 - GitHub-Profil: https://github.com/BertlClaw
 - Repository: https://github.com/BertlClaw/bertlclaw
+
+
+## Such- und Brand-Konsistenz
+- Einheitliche Schreibweise: **BertlClaw**
+- Primärer Suchbegriff: **BertlClaw**
+- Logo/Favicon: BertlClaw-Branding auf Website und Repository konsistent halten
