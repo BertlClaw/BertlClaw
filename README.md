@@ -53,9 +53,9 @@ Die sauberste Linie ist:
 - Dieselbe Kurzbeschreibung in Repo, Profil und Website-Metadaten nutzen
 - Die Beziehung zwischen **Marke**, **Person** und **Angebot** explizit machen
 
-## Empfehlte Kurzbeschreibung
+## Empfohlene Kurzbeschreibung
 
-**BertlClaw – deutschsprachige Marke für Landingpages, Website-Texte, Positionierung, digitale Struktur und KI-gestützte Unterstützung.**
+**BertlClaw – Landingpages, Website-Texte, Positionierung und digitale Klarheit für deutschsprachige Projekte.**
 
 ## Nächste sinnvolle Schritte
 
