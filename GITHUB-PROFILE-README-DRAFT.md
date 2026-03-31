@@ -1,20 +1,23 @@
-# GitHub Profile README Draft for `BertlClaw`
+# GitHub Profile README Pack for `BertlClaw`
 
 > Intended path on GitHub: `BertlClaw/BertlClaw` → `README.md`
+
+## Final README draft
 
 ```md
 # BertlClaw
 
-BertlClaw ist die projektnahe Marke von **Dominic Reisenbichler, MSc.** für **Landingpages, Website-Texte, Positionierung und digitale Klarheit**.
+BertlClaw ist die Projektmarke von **Dominic Reisenbichler, MSc.** für **Landingpages, Website-Texte, Positionierung, digitale Struktur und praktische KI-Unterstützung**.
 
-Keine anonyme Software-Fassade, sondern ein klar zugeordnetes Angebot für Selbstständige, Dienstleister, Gründer und kleine Unternehmen im deutschsprachigen Raum.
+Kein anonymer Agentur-Auftritt, sondern ein klar zugeordnetes deutschsprachiges Angebot für Selbstständige, Dienstleister, Gründer und kleine Unternehmen.
 
 ## Wofür BertlClaw steht
 
 - Landingpages und Angebotsseiten, die schneller verständlich werden
 - Website-Texte, die Nutzen, Unterschiede und Vertrauen klarer zeigen
+- Positionierung, wenn Angebote nicht mehr austauschbar wirken sollen
 - digitale Struktur, wenn aus offenen Themen wieder ein arbeitsfähiger Zustand werden soll
-- praktische KI-gestützte Unterstützung für Recherche, Struktur und digitale Umsetzung
+- praktische KI-Unterstützung für Recherche, Struktur und digitale Umsetzung
 
 ## Typische Startpunkte
 
@@ -26,45 +29,51 @@ Keine anonyme Software-Fassade, sondern ein klar zugeordnetes Angebot für Selbs
 
 - **Marke:** BertlClaw
 - **Betreiber:** Dominic Reisenbichler, MSc.
-- **Fokus:** deutschsprachige digitale Projekte mit klarem Nutzwert
-- **Schwerpunkt:** Websites, Texte, Positionierung, digitale Struktur
+- **Sprache:** Deutsch
+- **Fokus:** Landingpages, Website-Texte, Positionierung, digitale Struktur, KI-Unterstützung
 
 ## Links
 
 - Website: https://bertlclaw.github.io/bertlclaw/
-- Anwendungsfälle: https://bertlclaw.github.io/bertlclaw/use-cases.html
 - Leistungen: https://bertlclaw.github.io/bertlclaw/services.html
+- Anwendungsfälle: https://bertlclaw.github.io/bertlclaw/use-cases.html
 
 ## Kurzprofil
 
-BertlClaw verbindet klare Kommunikation, digitale Struktur und praktische Umsetzung für Menschen, deren Angebote online verständlicher, professioneller und nutzbarer werden sollen.
+BertlClaw verbindet klare Kommunikation, digitale Struktur und praktische Umsetzung für Menschen, deren Angebote online verständlicher, professioneller und handlungsstärker werden sollen.
 ```
 
-## Recommended GitHub profile bio
-
-BertlClaw ist die projektnahe Marke von Dominic Reisenbichler für Landingpages, Website-Texte, Positionierung und digitale Klarheit.
-
-## Recommended GitHub "About" fields
+## Recommended GitHub profile settings
 
 - **Display name:** BertlClaw
-- **Username:** BertlClaw
+- **Bio:** Projektmarke von Dominic Reisenbichler, MSc. für Landingpages, Website-Texte, Positionierung, digitale Struktur und KI-Unterstützung.
 - **Website:** https://bertlclaw.github.io/bertlclaw/
 - **Location:** Austria
-- **Pronouns:** leave empty unless personally desired
+- **Pronouns:** leer lassen, wenn nicht bewusst gewünscht
 
-## Recommended repository description
+## Recommended repository descriptions
 
-BertlClaw – Landingpages, Website-Texte, Positionierung und digitale Klarheit für deutschsprachige Projekte.
+- **Profile repo `BertlClaw/BertlClaw`:** GitHub-Profil-Repository der Projektmarke BertlClaw.
+- **Website repo `BertlClaw/bertlclaw`:** Öffentliche Web-Präsenz von BertlClaw mit Leistungen, Anwendungsfällen und Markenauftritt.
 
 ## Recommended pinned repository blurbs
 
-- **bertlclaw** — Öffentliche Web-Präsenz von BertlClaw mit Leistungsseiten, Anwendungsfällen und Kontaktstruktur.
-- **BertlClaw** — GitHub-Profil-Repository für die projektnahe Markenpräsenz von BertlClaw.
+- **bertlclaw** — Öffentliche Web-Präsenz von BertlClaw mit Leistungsseiten, Anwendungsfällen und klarer Markenpositionierung.
+- **BertlClaw** — Profil-Repository mit der kompakten öffentlichen Einordnung der Marke BertlClaw auf GitHub.
+
+## Operator naming rule
+
+Öffentlich immer in dieser Form führen:
+
+- **Marke:** BertlClaw
+- **Betreiber:** Dominic Reisenbichler, MSc.
+
+Nicht zwischen Varianten springen wie „Dominic", „Dominic Reisenbichler" und „BertlClaw“ ohne Einordnung. Erst die Marke nennen, dann den Betreiber klar zuordnen.
 
 ## Consistency notes
 
 - Einheitlich immer **BertlClaw** schreiben
-- Betreibername öffentlich konsistent als **Dominic Reisenbichler, MSc.** führen
+- Dieselbe Kurzlogik in Bio, README und Repo-Description nutzen: **Marke → Betreiber → Fokus**
+- AI nicht als alleinige Identität darstellen; öffentlich ist es ein Teilbereich der Arbeit, nicht die ganze Marke
 - Dasselbe Logo auf Website und GitHub verwenden (`bertlclaw-assets/logo-180.png` oder `bertlclaw-assets/logo-512.png`)
-- GitHub-Bio, Repo-Description und README nicht unterschiedlich positionieren
-- Nach außen lieber **Marke + Betreiber + Fokus** klar benennen als künstlich zwischen Person, Tool und Agentur zu springen
+- Deutsch als Primärsprache beibehalten, statt zwischen deutsch/englisch gemischt zu springen

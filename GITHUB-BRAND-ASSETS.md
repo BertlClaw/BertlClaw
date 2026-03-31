@@ -21,7 +21,14 @@ Für Selbstständige, Dienstleister und kleine Unternehmen: klarere Kommunikatio
 
 ## Short outward description
 
-BertlClaw ist ein deutschsprachiges Angebot von Dominic Reisenbichler, MSc. Der Fokus liegt auf Landingpages, Website-Texten, Positionierung und digitaler Klarheit – also genau dort, wo Angebote online verständlicher, glaubwürdiger und handlungsstärker werden sollen.
+BertlClaw ist die Projektmarke von Dominic Reisenbichler, MSc. für Landingpages, Website-Texte, Positionierung, digitale Struktur und praktische KI-Unterstützung. Der Fokus liegt dort, wo Angebote online verständlicher, glaubwürdiger und handlungsstärker werden sollen.
+
+## Exact GitHub-ready fields
+
+- **Display name:** `BertlClaw`
+- **Bio:** `Projektmarke von Dominic Reisenbichler, MSc. für Landingpages, Website-Texte, Positionierung, digitale Struktur und KI-Unterstützung.`
+- **Website:** `https://bertlclaw.github.io/bertlclaw/`
+- **Location:** `Austria`
 
 ## Public-facing proof lines
 

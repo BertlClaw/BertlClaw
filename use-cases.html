@@ -116,6 +116,15 @@
     </section>
 
     <section class="section">
+      <div class="section-head"><div><h2>Wie BertlClaw Wirkung ehrlich zeigt</h2></div><p>Statt erfundener Erfolgsgeschichten zählen hier sichtbare Unterschiede, greifbare Deliverables und freigegebene Ausschnitte aus echter Arbeit.</p></div>
+      <div class="grid-3">
+        <article class="card"><h3>Was gezeigt werden kann</h3><ul><li><strong>Vorher / Nachher:</strong> Hero, Headline, Textblock, Seitenstruktur oder Arbeitslogik</li><li><strong>Lieferergebnisse:</strong> Landingpage, Copy-Dokument, Strukturübersicht, Prioritätenliste oder FAQ-Block</li><li><strong>Freigegebene Ausschnitte:</strong> Screenshots, Textvergleiche, Wireframes oder Live-Seiten</li></ul></article>
+        <article class="card"><h3>Was bewusst nicht behauptet wird</h3><ul><li>keine erfundenen Testimonials</li><li>keine Fantasie-Zahlen zu Leads, Umsatz oder Conversion</li><li>keine übertriebene Agentur-Sprache ohne echten Nachweis</li></ul></article>
+        <article class="card"><h3>Woran man echte Verbesserung erkennt</h3><ul><li>Das Angebot wird schneller verstanden.</li><li>Texte brauchen weniger Nach-Erklärung im Gespräch.</li><li>Aus verstreutem Material wird eine arbeitsfähige Struktur.</li></ul></article>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="section-head"><div><h2>Häufige Fragen</h2></div><p>Kurz und direkt: wann BertlClaw sinnvoll ist und wann eher nicht.</p></div>
       <div class="faq">
         <article class="card"><h3>Ist BertlClaw eher Chat oder eher System?</h3><p>Eher System. Der Chat ist die Oberfläche, aber der eigentliche Wert entsteht durch Struktur, Umsetzung und wiederverwendbare Ergebnisse.</p></article>
@@ -195,7 +204,7 @@
       close.addEventListener('click',()=>setOpen(false));
       ask.addEventListener('click',()=>submitQuestion(input.value));
       input.addEventListener('keydown',e=>{ if(e.key==='Enter' && !e.shiftKey){ e.preventDefault(); submitQuestion(input.value); } });
-      toForm.addEventListener('click',()=>{ const form=document.getElementById('contactForm'); const textarea=form ? form.querySelector('textarea[name="message"]') : null; if(textarea){ textarea.value=input.value || 'Hallo, ich habe eine Frage zu BertlClaw.'; location.hash='kontakt'; }});
+      toForm.addEventListener('click',()=>{ const text=encodeURIComponent((input.value || 'Hallo, ich habe eine Frage zu BertlClaw.').trim()); location.href=`index.html#kontakt?prefill=${text}`; });
       document.querySelectorAll('[data-answer]').forEach(btn=>{ btn.addEventListener('click',()=>submitQuestion(btn.textContent)); });
     })();
   </script>
