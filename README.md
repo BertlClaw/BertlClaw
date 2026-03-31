@@ -1,73 +1,36 @@
 # BertlClaw
 
-BertlClaw ist die **Marke / Projektidentität** für ein deutschsprachiges Angebot rund um **Landingpages, Website-Texte, Positionierung, digitale Struktur und praktische KI-Unterstützung**.
+BertlClaw ist die Projektmarke von **Dominic Reisenbichler, MSc.** für **Landingpages, Website-Texte, Positionierung, digitale Struktur und praktische KI-Unterstützung**.
 
-Dieses Repository dient aktuell vor allem als **öffentliche Brand-, Profil- und Web-Präsenz** für BertlClaw.
+Kein anonymer Agentur-Auftritt, sondern ein klar zugeordnetes deutschsprachiges Angebot für Selbstständige, Dienstleister, Gründer und kleine Unternehmen.
+
+## Wofür BertlClaw steht
+
+- Landingpages und Angebotsseiten, die schneller verständlich werden
+- Website-Texte, die Nutzen, Unterschiede und Vertrauen klarer zeigen
+- Positionierung, wenn Angebote nicht mehr austauschbar wirken sollen
+- digitale Struktur, wenn aus offenen Themen wieder ein arbeitsfähiger Zustand werden soll
+- praktische KI-Unterstützung für Recherche, Struktur und digitale Umsetzung
+
+## Typische Startpunkte
+
+- **Landingpage Sprint** – für klarere Angebotsseiten und stärkere Leserführung
+- **Positionierung & Website-Texte** – für verständlichere Kommunikation und weniger austauschbare Sprache
+- **Digitale Ordnung & Klarheit** – für Prioritäten, Struktur und realistische nächste Schritte
 
 ## Klare Einordnung
 
-Damit GitHub, Suchmaschinen und Menschen das Projekt sauber einordnen können, sollte BertlClaw konsistent als Folgendes beschrieben werden:
-
-- **Markenname:** BertlClaw
-- **Betreiber / natürliche Person:** Dominic Reisenbichler, MSc.
-- **Typ:** Personennahe Marke / Projektmarke
+- **Marke:** BertlClaw
+- **Betreiber:** Dominic Reisenbichler, MSc.
 - **Sprache:** Deutsch
-- **Schwerpunkt:** Landingpages, Website-Texte, Positionierung, digitale Struktur, KI-gestützte Unterstützung
+- **Fokus:** Landingpages, Website-Texte, Positionierung, digitale Struktur, KI-Unterstützung
 
-## Fokus
-
-- Landingpages & Websites
-- Website-Texte & Angebotsseiten
-- Positionierung & klare Kommunikation
-- Digitale Struktur, Systeme & Dokumentation
-- KI-gestützte Unterstützung für digitale Projekte
-
-## Wichtige Links
+## Links
 
 - Website: https://bertlclaw.github.io/bertlclaw/
-- GitHub-Profil: https://github.com/BertlClaw
-- Repository: https://github.com/BertlClaw/bertlclaw
+- Leistungen: https://bertlclaw.github.io/bertlclaw/services.html
+- Anwendungsfälle: https://bertlclaw.github.io/bertlclaw/use-cases.html
 
-## Positionierungs-Hinweis
+## Kurzprofil
 
-BertlClaw sollte auf GitHub **nicht widersprüchlich** zugleich als:
-
-1. reine Person,
-2. reine Software,
-3. lokaler AI-Begleiter,
-4. und Dienstleistungsmarke
-
-auftreten, ohne die Beziehungen dazwischen zu erklären.
-
-Die sauberste Linie ist:
-
-> **BertlClaw ist die Marke.**  
-> Unter dieser Marke erscheinen Web-Präsenz, Inhalte, KI-gestützte Unterstützung und digitale Angebote.  
-> **Dominic Reisenbichler, MSc.** ist der Betreiber / die zugeordnete Person hinter dem Projekt.
-
-## Brand-Signale
-
-- Einheitliche Schreibweise: **BertlClaw**
-- Betreibername konsistent nennen: **Dominic Reisenbichler, MSc.**
-- Dasselbe Logo / dieselben Assets auf Website und GitHub verwenden
-- Dieselbe Kurzbeschreibung in Repo, Profil und Website-Metadaten nutzen
-- Die Beziehung zwischen **Marke**, **Person** und **Angebot** explizit machen
-
-## Empfohlene Kurzbeschreibung
-
-**BertlClaw – Landingpages, Website-Texte, Positionierung und digitale Klarheit für deutschsprachige Projekte.**
-
-## Nächste sinnvolle Schritte
-
-- GitHub-Profil-README anlegen
-- Repository-Description an die Kurzbeschreibung angleichen
-- Social / Open Graph / strukturierte Metadaten an derselben Entity-Definition ausrichten
-- Impressum / Betreiberhinweis auf der Website klar sichtbar machen
-
-Weitere Details liegen in:
-
-- `SEO-BRAND-NOTES.md`
-- `BERTLCLAW-METADATA.md`
-- `GITHUB-PROFILE-README-DRAFT.md`
-- `GITHUB-LIVE-CHECKLIST.md`
-- `BRAND-MITIGATION-NOTES.md`
+BertlClaw verbindet klare Kommunikation, digitale Struktur und praktische Umsetzung für Menschen, deren Angebote online verständlicher, professioneller und handlungsstärker werden sollen.
