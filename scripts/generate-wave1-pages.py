@@ -105,6 +105,37 @@ profession_map = {
         'problem': 'Wenn SAP-Beratung fachlich stark ist, online aber noch zu generisch, zu technisch oder zu wenig anschlussfähig beschrieben wird.',
         'deliverable': 'stärkerer Vertrauensrahmen und verständlichere Angebotskommunikation für SAP-nahe Beratungsangebote',
     },
+
+    'microsoft-dynamics-berater': {
+        'title': 'Microsoft-Dynamics-Berater in {city_label}',
+        'h1': 'Landingpage für Microsoft-Dynamics-Berater in {city_label}',
+        'problem': 'Wenn Dynamics-, ERP- oder Prozessberatung fachlich stark ist, online aber noch nicht klar genug als relevantes B2B-Angebot sichtbar wird.',
+        'deliverable': 'klarere Leistungsdarstellung, verständlichere Positionierung und stärkere Anfrageführung für Microsoft-Dynamics-nahe Beratung',
+    },
+    'erp-berater': {
+        'title': 'ERP-Berater in {city_label}',
+        'h1': 'Landingpage für ERP-Berater in {city_label}',
+        'problem': 'Wenn ERP-Beratung zwar fachlich überzeugend ist, online aber noch nicht klar genug zeigt, welche Probleme konkret gelöst werden.',
+        'deliverable': 'stärkerer Vertrauensrahmen, bessere Struktur und klarere Angebotskommunikation für ERP-nahe Beratung',
+    },
+    'business-central-berater': {
+        'title': 'Business-Central-Berater in {city_label}',
+        'h1': 'Landingpage für Business-Central-Berater in {city_label}',
+        'problem': 'Wenn Business-Central-Leistungen fachlich stark sind, online aber noch zu technisch oder zu wenig anschlussfähig beschrieben werden.',
+        'deliverable': 'verständlichere Leistungsdarstellung und stärkere Conversion-Logik für Business-Central-nahe Beratungsangebote',
+    },
+    'prozessberater': {
+        'title': 'Prozessberater in {city_label}',
+        'h1': 'Landingpage für Prozessberater in {city_label}',
+        'problem': 'Wenn Prozessberatung zwar relevant ist, online aber noch nicht schnell genug klar wird, welchen Unterschied sie für Unternehmen macht.',
+        'deliverable': 'klarere Nutzenkommunikation, bessere Struktur und stärkere Anfragefähigkeit für Prozessberatung',
+    },
+    'transformationsberater': {
+        'title': 'Transformationsberater in {city_label}',
+        'h1': 'Landingpage für Transformationsberater in {city_label}',
+        'problem': 'Wenn Transformationsberatung online noch zu abstrakt, zu strategisch oder zu wenig greifbar kommuniziert wird.',
+        'deliverable': 'klarere Positionierung, verständlichere Nutzenübersetzung und stärkerer Vertrauensaufbau für Transformationsberatung',
+    },
 }
 city_labels = {
     'wien':'Wien','graz':'Graz','linz':'Linz','salzburg':'Salzburg','innsbruck':'Innsbruck','klagenfurt':'Klagenfurt','st-poelten':'St. Pölten','wiener-neustadt':'Wiener Neustadt',
