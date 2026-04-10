@@ -68,6 +68,43 @@ profession_map = {
         'problem': 'Wenn Energieberatung, Sanierung oder Effizienzthemen online noch nicht klar genug erklärt werden und dadurch zu wenig Vertrauen oder Relevanz entsteht.',
         'deliverable': 'klarere Angebotskommunikation, bessere Struktur und stärkere Conversion-Logik für Energieberatungsangebote',
     },
+
+    'salesforce-berater': {
+        'title': 'Salesforce-Berater in {city_label}',
+        'h1': 'Landingpage für Salesforce-Berater in {city_label}',
+        'problem': 'Wenn Salesforce-, CRM- oder RevOps-nahe Leistungen fachlich stark sind, online aber noch nicht klar genug in ein vertrauenswürdiges Beratungsangebot übersetzt werden.',
+        'deliverable': 'klarere Positionierung, verständlichere Leistungsdarstellung und stärkere Anfrageführung für Salesforce-nahe Beratungsangebote',
+    },
+    'hubspot-berater': {
+        'title': 'HubSpot-Berater in {city_label}',
+        'h1': 'Landingpage für HubSpot-Berater in {city_label}',
+        'problem': 'Wenn HubSpot-, Funnel-, CRM- oder Marketing-Sales-Themen online noch zu abstrakt oder zu toollastig wirken.',
+        'deliverable': 'klarere Nutzenkommunikation, bessere Angebotsstruktur und stärkere Conversion-Logik für HubSpot-nahe Beratung',
+    },
+    'crm-berater': {
+        'title': 'CRM-Berater in {city_label}',
+        'h1': 'Landingpage für CRM-Berater in {city_label}',
+        'problem': 'Wenn CRM-Beratung fachlich stark ist, online aber noch nicht verständlich genug zeigt, welchen geschäftlichen Unterschied sie macht.',
+        'deliverable': 'verständlichere Leistungsdarstellung und stärkere Anfragefähigkeit für CRM-nahe Beratungsangebote',
+    },
+    'revops-berater': {
+        'title': 'RevOps-Berater in {city_label}',
+        'h1': 'Landingpage für RevOps-Berater in {city_label}',
+        'problem': 'Wenn Revenue-Operations-Themen zwar relevant sind, online aber noch zu abstrakt oder zu erklärungsbedürftig bleiben.',
+        'deliverable': 'klarere Positionierung, bessere Nutzenübersetzung und ein vertrauenswürdigerer Auftritt für RevOps-nahe Beratung',
+    },
+    'odoo-berater': {
+        'title': 'Odoo-Berater in {city_label}',
+        'h1': 'Landingpage für Odoo-Berater in {city_label}',
+        'problem': 'Wenn Odoo- oder ERP-nahe Leistungen online noch nicht klar genug sichtbar machen, für wen sie gedacht sind und welchen Nutzen sie bringen.',
+        'deliverable': 'klarere Leistungsdarstellung, bessere Struktur und stärkere Anfrageführung für Odoo-nahe Beratung',
+    },
+    'sap-berater': {
+        'title': 'SAP-Berater in {city_label}',
+        'h1': 'Landingpage für SAP-Berater in {city_label}',
+        'problem': 'Wenn SAP-Beratung fachlich stark ist, online aber noch zu generisch, zu technisch oder zu wenig anschlussfähig beschrieben wird.',
+        'deliverable': 'stärkerer Vertrauensrahmen und verständlichere Angebotskommunikation für SAP-nahe Beratungsangebote',
+    },
 }
 city_labels = {
     'wien':'Wien','graz':'Graz','linz':'Linz','salzburg':'Salzburg','innsbruck':'Innsbruck','klagenfurt':'Klagenfurt','st-poelten':'St. Pölten','wiener-neustadt':'Wiener Neustadt',
