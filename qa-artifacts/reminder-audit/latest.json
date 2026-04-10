@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-04-10 12:24:43 CEST",
+  "audit_window_hours": 6,
+  "expected_hourly_slots": [
+    "2026-04-10 07:00",
+    "2026-04-10 08:00",
+    "2026-04-10 09:00",
+    "2026-04-10 10:00",
+    "2026-04-10 11:00",
+    "2026-04-10 12:00"
+  ],
+  "missing_hourly_slots": [
+    "2026-04-10 07:00",
+    "2026-04-10 08:00",
+    "2026-04-10 09:00",
+    "2026-04-10 10:00",
+    "2026-04-10 11:00"
+  ],
+  "last_daily_slot_seen_in_log": "2026-04-10",
+  "state_snapshot": {
+    "version": 1,
+    "timezone": "Europe/Vienna",
+    "last_hourly_update_at": "2026-04-10 12:24",
+    "last_daily_github_ticket_reminder_at": "2026-04-10",
+    "last_run_at": "2026-04-10 12:24:43",
+    "runs": [
+      {
+        "at": "2026-04-10 12:24:43",
+        "emitted": [
+          "hourly_update",
+          "daily_github_ticket_reminder"
+        ]
+      }
+    ]
+  },
+  "status": "fail",
+  "next_expected_hourly_slot": "2026-04-10 13:00"
+}
