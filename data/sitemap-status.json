@@ -1,0 +1,447 @@
+{
+  "source": "live sitemap snapshot",
+  "count": 63,
+  "items": [
+    {
+      "url": "https://bertlclaw.at/",
+      "path": "/",
+      "local_file": "index.html",
+      "status": "live_local_present",
+      "kind": "core"
+    },
+    {
+      "url": "https://bertlclaw.at/services.html",
+      "path": "/services.html",
+      "local_file": "services.html",
+      "status": "live_local_present",
+      "kind": "core"
+    },
+    {
+      "url": "https://bertlclaw.at/kontakt.html",
+      "path": "/kontakt.html",
+      "local_file": "kontakt.html",
+      "status": "live_local_present",
+      "kind": "core"
+    },
+    {
+      "url": "https://bertlclaw.at/erstgespraech.html",
+      "path": "/erstgespraech.html",
+      "local_file": "erstgespraech.html",
+      "status": "live_local_present",
+      "kind": "core"
+    },
+    {
+      "url": "https://bertlclaw.at/preise.html",
+      "path": "/preise.html",
+      "local_file": "preise.html",
+      "status": "live_local_present",
+      "kind": "core"
+    },
+    {
+      "url": "https://bertlclaw.at/proof.html",
+      "path": "/proof.html",
+      "local_file": "proof.html",
+      "status": "live_local_present",
+      "kind": "core"
+    },
+    {
+      "url": "https://bertlclaw.at/arbeitsweise.html",
+      "path": "/arbeitsweise.html",
+      "local_file": "arbeitsweise.html",
+      "status": "live_local_present",
+      "kind": "core"
+    },
+    {
+      "url": "https://bertlclaw.at/ueber-bertlclaw.html",
+      "path": "/ueber-bertlclaw.html",
+      "local_file": "ueber-bertlclaw.html",
+      "status": "live_local_present",
+      "kind": "core"
+    },
+    {
+      "url": "https://bertlclaw.at/landingpages.html",
+      "path": "/landingpages.html",
+      "local_file": "landingpages.html",
+      "status": "live_local_present",
+      "kind": "core"
+    },
+    {
+      "url": "https://bertlclaw.at/use-cases.html",
+      "path": "/use-cases.html",
+      "local_file": "use-cases.html",
+      "status": "live_local_present",
+      "kind": "core"
+    },
+    {
+      "url": "https://bertlclaw.at/faq.html",
+      "path": "/faq.html",
+      "local_file": "faq.html",
+      "status": "live_local_present",
+      "kind": "core"
+    },
+    {
+      "url": "https://bertlclaw.at/impressum.html",
+      "path": "/impressum.html",
+      "local_file": "impressum.html",
+      "status": "live_local_present",
+      "kind": "cluster_or_other"
+    },
+    {
+      "url": "https://bertlclaw.at/datenschutz.html",
+      "path": "/datenschutz.html",
+      "local_file": "datenschutz.html",
+      "status": "live_local_present",
+      "kind": "cluster_or_other"
+    },
+    {
+      "url": "https://bertlclaw.at/website-texte-positionierung.html",
+      "path": "/website-texte-positionierung.html",
+      "local_file": "website-texte-positionierung.html",
+      "status": "live_local_present",
+      "kind": "cluster_or_other"
+    },
+    {
+      "url": "https://bertlclaw.at/positionierung-website-texte.html",
+      "path": "/positionierung-website-texte.html",
+      "local_file": "positionierung-website-texte.html",
+      "status": "live_local_present",
+      "kind": "cluster_or_other"
+    },
+    {
+      "url": "https://bertlclaw.at/digitale-struktur-systeme.html",
+      "path": "/digitale-struktur-systeme.html",
+      "local_file": "digitale-struktur-systeme.html",
+      "status": "live_local_present",
+      "kind": "cluster_or_other"
+    },
+    {
+      "url": "https://bertlclaw.at/digital-clarity-setup.html",
+      "path": "/digital-clarity-setup.html",
+      "local_file": "digital-clarity-setup.html",
+      "status": "live_local_present",
+      "kind": "cluster_or_other"
+    },
+    {
+      "url": "https://bertlclaw.at/ki-fuer-selbststaendige.html",
+      "path": "/ki-fuer-selbststaendige.html",
+      "local_file": "ki-fuer-selbststaendige.html",
+      "status": "live_local_present",
+      "kind": "cluster_or_other"
+    },
+    {
+      "url": "https://bertlclaw.at/mvp-digitale-produktideen.html",
+      "path": "/mvp-digitale-produktideen.html",
+      "local_file": "mvp-digitale-produktideen.html",
+      "status": "live_local_present",
+      "kind": "cluster_or_other"
+    },
+    {
+      "url": "https://bertlclaw.at/landingpage-sprint.html",
+      "path": "/landingpage-sprint.html",
+      "local_file": "landingpage-sprint.html",
+      "status": "live_local_present",
+      "kind": "cluster_or_other"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/index.html",
+      "path": "/blog/index.html",
+      "local_file": "blog/index.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/erste-kunden-gewinnen-selbststaendige.html",
+      "path": "/blog/erste-kunden-gewinnen-selbststaendige.html",
+      "local_file": "blog/erste-kunden-gewinnen-selbststaendige.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/gewerbe-anmelden-oesterreich.html",
+      "path": "/blog/gewerbe-anmelden-oesterreich.html",
+      "local_file": "blog/gewerbe-anmelden-oesterreich.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/website-kosten-selbststaendige.html",
+      "path": "/blog/website-kosten-selbststaendige.html",
+      "local_file": "blog/website-kosten-selbststaendige.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/positionierung-nische-beispiele.html",
+      "path": "/blog/positionierung-nische-beispiele.html",
+      "local_file": "blog/positionierung-nische-beispiele.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/freelancer-rechnung-schreiben.html",
+      "path": "/blog/freelancer-rechnung-schreiben.html",
+      "local_file": "blog/freelancer-rechnung-schreiben.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/netzwerk-aufbauen-selbststaendige.html",
+      "path": "/blog/netzwerk-aufbauen-selbststaendige.html",
+      "local_file": "blog/netzwerk-aufbauen-selbststaendige.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/erp-hintergrund-freelancer.html",
+      "path": "/blog/erp-hintergrund-freelancer.html",
+      "local_file": "blog/erp-hintergrund-freelancer.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/website-absprungrate-reduzieren.html",
+      "path": "/blog/website-absprungrate-reduzieren.html",
+      "local_file": "blog/website-absprungrate-reduzieren.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/website-conversion-optimieren.html",
+      "path": "/blog/website-conversion-optimieren.html",
+      "local_file": "blog/website-conversion-optimieren.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/linkedin-profil-selbststaendige.html",
+      "path": "/blog/linkedin-profil-selbststaendige.html",
+      "local_file": "blog/linkedin-profil-selbststaendige.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/online-sichtbarkeit-ohne-social-media.html",
+      "path": "/blog/online-sichtbarkeit-ohne-social-media.html",
+      "local_file": "blog/online-sichtbarkeit-ohne-social-media.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/kunden-finden-ohne-kaltakquise.html",
+      "path": "/blog/kunden-finden-ohne-kaltakquise.html",
+      "local_file": "blog/kunden-finden-ohne-kaltakquise.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/angebot-schreiben-freelancer.html",
+      "path": "/blog/angebot-schreiben-freelancer.html",
+      "local_file": "blog/angebot-schreiben-freelancer.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/content-marketing-selbststaendige.html",
+      "path": "/blog/content-marketing-selbststaendige.html",
+      "local_file": "blog/content-marketing-selbststaendige.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/copywriting-selbststaendige-tipps.html",
+      "path": "/blog/copywriting-selbststaendige-tipps.html",
+      "local_file": "blog/copywriting-selbststaendige-tipps.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/digitale-nomaden-freelancer.html",
+      "path": "/blog/digitale-nomaden-freelancer.html",
+      "local_file": "blog/digitale-nomaden-freelancer.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/digitale-praesenz-selbststaendige.html",
+      "path": "/blog/digitale-praesenz-selbststaendige.html",
+      "local_file": "blog/digitale-praesenz-selbststaendige.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/digitales-angebot-erstellen.html",
+      "path": "/blog/digitales-angebot-erstellen.html",
+      "local_file": "blog/digitales-angebot-erstellen.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/empfehlungsmarketing-selbststaendige.html",
+      "path": "/blog/empfehlungsmarketing-selbststaendige.html",
+      "local_file": "blog/empfehlungsmarketing-selbststaendige.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/erster-auftrag-als-freelancer.html",
+      "path": "/blog/erster-auftrag-als-freelancer.html",
+      "local_file": "blog/erster-auftrag-als-freelancer.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/freelancer-produktivitaet.html",
+      "path": "/blog/freelancer-produktivitaet.html",
+      "local_file": "blog/freelancer-produktivitaet.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/freelancer-stundensatz-berechnen.html",
+      "path": "/blog/freelancer-stundensatz-berechnen.html",
+      "local_file": "blog/freelancer-stundensatz-berechnen.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/freelancer-website-checkliste-2026.html",
+      "path": "/blog/freelancer-website-checkliste-2026.html",
+      "local_file": "blog/freelancer-website-checkliste-2026.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/freelancer-website-keine-anfragen.html",
+      "path": "/blog/freelancer-website-keine-anfragen.html",
+      "local_file": "blog/freelancer-website-keine-anfragen.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/google-my-business-selbststaendige.html",
+      "path": "/blog/google-my-business-selbststaendige.html",
+      "local_file": "blog/google-my-business-selbststaendige.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/kleine-unternehmen-website-tipps.html",
+      "path": "/blog/kleine-unternehmen-website-tipps.html",
+      "local_file": "blog/kleine-unternehmen-website-tipps.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/kundengespraeche-fuehren.html",
+      "path": "/blog/kundengespraeche-fuehren.html",
+      "local_file": "blog/kundengespraeche-fuehren.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/landingpage-vs-website.html",
+      "path": "/blog/landingpage-vs-website.html",
+      "local_file": "blog/landingpage-vs-website.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/nische-finden-schritt-fuer-schritt.html",
+      "path": "/blog/nische-finden-schritt-fuer-schritt.html",
+      "local_file": "blog/nische-finden-schritt-fuer-schritt.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/positionierung-freelancer-leitfaden.html",
+      "path": "/blog/positionierung-freelancer-leitfaden.html",
+      "local_file": "blog/positionierung-freelancer-leitfaden.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/preise-kommunizieren-freelancer.html",
+      "path": "/blog/preise-kommunizieren-freelancer.html",
+      "local_file": "blog/preise-kommunizieren-freelancer.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/preisverhandlung-freelancer.html",
+      "path": "/blog/preisverhandlung-freelancer.html",
+      "local_file": "blog/preisverhandlung-freelancer.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/projektmanagement-freelancer.html",
+      "path": "/blog/projektmanagement-freelancer.html",
+      "local_file": "blog/projektmanagement-freelancer.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/selbststaendige-social-media.html",
+      "path": "/blog/selbststaendige-social-media.html",
+      "local_file": "blog/selbststaendige-social-media.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/selbststaendige-versicherungen.html",
+      "path": "/blog/selbststaendige-versicherungen.html",
+      "local_file": "blog/selbststaendige-versicherungen.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/seo-grundlagen-selbststaendige.html",
+      "path": "/blog/seo-grundlagen-selbststaendige.html",
+      "local_file": "blog/seo-grundlagen-selbststaendige.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/testimonials-einsammeln-freelancer.html",
+      "path": "/blog/testimonials-einsammeln-freelancer.html",
+      "local_file": "blog/testimonials-einsammeln-freelancer.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/was-kostet-landingpage-2026.html",
+      "path": "/blog/was-kostet-landingpage-2026.html",
+      "local_file": "blog/was-kostet-landingpage-2026.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/website-barrierefreiheit-selbststaendige.html",
+      "path": "/blog/website-barrierefreiheit-selbststaendige.html",
+      "local_file": "blog/website-barrierefreiheit-selbststaendige.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/website-gefunden-werden-wie-lange.html",
+      "path": "/blog/website-gefunden-werden-wie-lange.html",
+      "local_file": "blog/website-gefunden-werden-wie-lange.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/website-relaunch-selbststaendige.html",
+      "path": "/blog/website-relaunch-selbststaendige.html",
+      "local_file": "blog/website-relaunch-selbststaendige.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    },
+    {
+      "url": "https://bertlclaw.at/blog/website-texte-selber-schreiben.html",
+      "path": "/blog/website-texte-selber-schreiben.html",
+      "local_file": "blog/website-texte-selber-schreiben.html",
+      "status": "live_local_present",
+      "kind": "blog"
+    }
+  ]
+}
