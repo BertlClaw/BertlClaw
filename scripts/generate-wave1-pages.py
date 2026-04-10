@@ -55,6 +55,19 @@ profession_map = {
         'problem': 'Wenn HR-, Recruiting- oder People-Themen zwar fachlich kompetent sind, online aber noch nicht klar genug in ein starkes Beratungsangebot übersetzt werden.',
         'deliverable': 'stärkere Positionierung, klarere Nutzenkommunikation und ein vertrauenswürdigerer Auftritt für HR-nahe Beratung',
     },
+
+    'datenschutzberater': {
+        'title': 'Datenschutzberater in {city_label}',
+        'h1': 'Landingpage für Datenschutzberater in {city_label}',
+        'problem': 'Wenn Datenschutz- und Compliance-Leistungen fachlich wichtig sind, online aber noch zu trocken, zu technisch oder zu wenig vertrauenswürdig erscheinen.',
+        'deliverable': 'stärkerer Vertrauensrahmen, verständlichere Leistungsdarstellung und klarere Anfrageführung für Datenschutz-nahe Beratungsangebote',
+    },
+    'energieberater': {
+        'title': 'Energieberater in {city_label}',
+        'h1': 'Landingpage für Energieberater in {city_label}',
+        'problem': 'Wenn Energieberatung, Sanierung oder Effizienzthemen online noch nicht klar genug erklärt werden und dadurch zu wenig Vertrauen oder Relevanz entsteht.',
+        'deliverable': 'klarere Angebotskommunikation, bessere Struktur und stärkere Conversion-Logik für Energieberatungsangebote',
+    },
 }
 city_labels = {
     'wien':'Wien','graz':'Graz','linz':'Linz','salzburg':'Salzburg','innsbruck':'Innsbruck','klagenfurt':'Klagenfurt','st-poelten':'St. Pölten','wiener-neustadt':'Wiener Neustadt',
