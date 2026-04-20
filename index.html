@@ -22,7 +22,6 @@
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" href="bertlclaw-assets/logo-32.png" />
   <link rel="apple-touch-icon" href="bertlclaw-assets/logo-180.png" />
-  <!-- Google Search Console verification — replace content value after GSC setup -->
   <meta name="google-site-verification" content="REPLACE_WITH_GSC_CODE" />
   <style>
     :root {
@@ -62,21 +61,21 @@
     .nav-links a,.mini-btn{padding:10px 14px;border-radius:12px;color:var(--muted);border:1px solid transparent}
     .nav-links a:hover,.mini-btn:hover{border-color:var(--border)}
     .mini-btn{background:rgba(255,255,255,.04);color:var(--text)}
-    .section{padding:64px 0}
-    .hero{padding:40px 0 24px;background:linear-gradient(180deg,var(--bg-hero) 0%, #08182c 100%)}
-    .hero-card,.panel-card,.trust-card,.service-card,.proof-card,.cta-shell,.contact-card{border:1px solid var(--border);background:var(--panel);border-radius:var(--radius);box-shadow:var(--shadow)}
-    .hero-card{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;padding:36px;align-items:stretch}
+    .section{padding:56px 0}
+    .hero{padding:28px 0 18px;background:linear-gradient(180deg,var(--bg-hero) 0%, #08182c 100%)}
+    .hero-card,.panel-card,.trust-card,.service-card,.proof-card,.cta-shell,.contact-card,.compare-card,.fit-card,.scenario-card,.step-card,.before-after-card{border:1px solid var(--border);background:var(--panel);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero-card{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;padding:28px;align-items:stretch}
     .eyebrow,.micro-label,.proof-badge,.top-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid var(--border-strong);background:rgba(142,197,255,.08);color:var(--accent-strong);font-size:.84rem;font-weight:700;letter-spacing:.03em}
     h1,h2,h3{margin:0 0 14px;line-height:1.08}
-    h1{font-size:clamp(2.4rem,6vw,4.8rem);letter-spacing:-.05em;max-width:10ch}
+    h1{font-size:clamp(2.2rem,5vw,4.2rem);letter-spacing:-.05em;max-width:12ch}
     h2{font-size:clamp(1.8rem,3vw,3rem);letter-spacing:-.04em}
-    h3{font-size:1.16rem}
+    h3{font-size:1.12rem}
     p{margin:0 0 14px}
-    .lead{font-size:1.08rem;color:var(--muted);max-width:60ch}
+    .lead{font-size:1.04rem;color:var(--muted);max-width:56ch}
     .hero-proof{display:grid;gap:12px;margin:18px 0}
     .hero-proof .trust-card{padding:16px 18px;background:var(--panel-soft)}
     .hero-proof strong{display:block;margin-bottom:4px}
-    .video-block{display:grid;gap:14px;margin:22px 0 10px}
+    .video-block{display:grid;gap:14px;margin:16px 0 10px}
     .video-shell{position:relative;overflow:hidden;border-radius:22px;border:1px solid rgba(147,197,253,.22);background:#071427;box-shadow:0 18px 48px rgba(0,0,0,.34), inset 0 0 0 1px rgba(255,255,255,.03)}
     .video-shell::before{content:"";display:block;padding-top:56.25%}
     .video-poster,.video-embed{position:absolute;inset:0;width:100%;height:100%}
@@ -86,8 +85,6 @@
     .video-poster-content{position:absolute;inset:0;z-index:1;display:grid;place-items:center;padding:24px}
     .video-play{display:inline-flex;align-items:center;justify-content:center;width:92px;height:92px;border-radius:999px;background:rgba(7,17,32,.72);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(12px);box-shadow:0 10px 32px rgba(0,0,0,.32);transition:transform .18s ease, background .18s ease, box-shadow .18s ease}
     .video-play::before{content:"";display:block;margin-left:5px;border-top:16px solid transparent;border-bottom:16px solid transparent;border-left:24px solid #ffffff}
-    .video-poster:hover .video-play,.video-poster:focus-visible .video-play{transform:scale(1.06);background:rgba(110,231,216,.18);box-shadow:0 14px 34px rgba(0,0,0,.38)}
-    .video-poster:focus-visible{outline:2px solid rgba(110,231,216,.9);outline-offset:3px}
     .video-inline-cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:14px 16px;border-radius:18px;border:1px solid var(--border);background:rgba(255,255,255,.04)}
     .video-inline-cta p{margin:0;color:var(--muted)}
     .hero-quick-points{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
@@ -101,38 +98,26 @@
     .hero-aside{display:grid;gap:16px}
     .hero-visual{overflow:hidden;min-height:100%;background:linear-gradient(180deg,rgba(142,197,255,.08),rgba(6,17,32,.2))}
     .hero-visual img{width:100%;height:100%;object-fit:cover}
-    .hero-list,.trust-list,.service-list,.footer-links{display:grid;gap:12px}
-    .hero-list{padding:0;margin:18px 0 0;list-style:none}
-    .hero-list li,.trust-list li,.service-list li{padding-left:0;color:var(--muted)}
     .section-header{display:grid;gap:14px;margin-bottom:24px;max-width:72ch}
     .problem-solution{background:linear-gradient(180deg,var(--bg-problem) 0%, #0a1d35 100%)}
-    .problem-grid,.service-grid,.trust-grid,.footer-grid{display:grid;gap:18px}
-    .problem-grid{grid-template-columns:1fr 1fr}
-    .panel-card{padding:28px}
+    .service-grid,.trust-grid,.footer-grid,.compare-grid,.fit-grid,.scenario-grid,.steps-grid,.before-after-grid,.price-grid,.roi-grid{display:grid;gap:18px}
+    .service-grid{grid-template-columns:repeat(3,1fr)}
+    .trust-grid{grid-template-columns:1.1fr .9fr}
+    .compare-grid{grid-template-columns:repeat(4,1fr)}
+    .fit-grid,.scenario-grid,.steps-grid,.before-after-grid,.price-grid,.roi-grid{grid-template-columns:repeat(2,1fr)}
+    .panel-card,.service-card,.proof-card,.contact-card,.compare-card,.fit-card,.scenario-card,.before-after-card,.price-card,.roi-card{padding:24px;background:var(--panel-soft)}
+    .compare-card.highlight{border-color:var(--border-strong);background:linear-gradient(180deg,rgba(142,197,255,.14),rgba(11,23,44,.88))}
+    .service-card ul,.compare-card ul,.fit-card ul,.scenario-card ul,.before-after-card ul,.mini-proof-list{margin:14px 0 0;padding-left:18px;display:grid;gap:8px;color:var(--muted)}
+    .proof-stack{display:grid;gap:16px}
     .problem-list{margin:0;padding-left:20px;color:var(--muted);display:grid;gap:10px}
     .services{background:linear-gradient(180deg,var(--bg-services) 0%, #0d2543 100%)}
-    .service-grid{grid-template-columns:repeat(3,1fr)}
-    .service-card{padding:26px;background:var(--panel-soft)}
-    .service-card ul{margin:14px 0 0;padding-left:18px;display:grid;gap:8px;color:var(--muted)}
     .trust{background:linear-gradient(180deg,var(--bg-trust) 0%, #0d2748 100%)}
-    .trust-grid{grid-template-columns:1.1fr .9fr}
-    .proof-stack{display:grid;gap:16px}
-    .proof-card,.contact-card{padding:24px;background:var(--panel-soft)}
-    .proof-card p,.contact-card p{color:var(--muted)}
-    .mini-proof-list{display:grid;gap:10px;margin:0;padding:0;list-style:none}
-    .mini-proof-list li{padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.04);color:var(--muted);border:1px solid var(--border)}
     .proof-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
     .proof-badge{font-weight:600}
-    .compare-grid,.scenario-grid,.steps-grid,.before-after-grid{display:grid;gap:18px}
-    .compare-grid{grid-template-columns:repeat(4,1fr)}
-    .scenario-grid,.steps-grid,.before-after-grid{grid-template-columns:repeat(2,1fr)}
-    .compare-card,.scenario-card,.step-card,.before-after-card{padding:24px;border-radius:22px;border:1px solid var(--border);background:var(--panel-soft);box-shadow:var(--shadow)}
-    .compare-card.highlight{border-color:var(--border-strong);background:linear-gradient(180deg,rgba(142,197,255,.14),rgba(11,23,44,.88))}
-    .compare-card ul,.scenario-card ul,.before-after-card ul{margin:14px 0 0;padding-left:18px;display:grid;gap:8px;color:var(--muted)}
-    .step-card{display:flex;gap:14px;align-items:flex-start}
-    .step-number{width:34px;height:34px;border-radius:999px;display:grid;place-items:center;border:1px solid var(--border-strong);background:rgba(142,197,255,.1);font-weight:800;color:var(--accent-strong);flex:0 0 auto}
     .cta-section{background:linear-gradient(180deg,var(--bg-cta) 0%, #0f3159 100%)}
     .cta-shell{padding:32px;display:grid;grid-template-columns:1fr .95fr;gap:22px;background:rgba(7,18,34,.9)}
+    .step-card{display:flex;gap:14px;align-items:flex-start;padding:20px;background:var(--panel-soft)}
+    .step-number{width:34px;height:34px;border-radius:999px;display:grid;place-items:center;border:1px solid var(--border-strong);background:rgba(142,197,255,.1);font-weight:800;color:var(--accent-strong);flex:0 0 auto}
     .contact-form{display:grid;gap:14px}
     .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
     .field{display:grid;gap:8px}.field.full{grid-column:1 / -1}
@@ -150,11 +135,11 @@
     .cookie-actions{display:flex;gap:10px;flex-wrap:wrap}
     .footer{padding:36px 0 80px;background:#061120}
     .footer-grid{grid-template-columns:1fr auto;align-items:start}
-    .footer-links{grid-template-columns:repeat(3,auto);gap:10px 16px}
+    .footer-links{display:grid;grid-template-columns:repeat(3,auto);gap:10px 16px}
     .muted{color:var(--muted)}
     .mobile-contact-bar{display:none}
-    @media (max-width:1080px){.hero-card,.problem-grid,.service-grid,.trust-grid,.cta-shell,.form-grid,.footer-grid,.hero-quick-points,.compare-grid,.scenario-grid,.steps-grid,.before-after-grid{grid-template-columns:1fr}.hero-card{padding:28px}.footer-links{grid-template-columns:repeat(2,auto)}}
-    @media (max-width:720px){body{padding-bottom:108px}.nav-inner{align-items:flex-start;flex-direction:column}.nav-links{display:none}.section{padding:44px 0}.hero{padding-top:24px}.hero-card,.panel-card,.service-card,.proof-card,.cta-shell,.contact-card{padding:22px}.cta .btn,.cookie-actions .btn{width:100%}.cookie-inner{flex-direction:column;align-items:flex-start}.mobile-contact-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:180;display:grid;grid-template-columns:1fr auto;gap:10px;padding:8px;border-radius:18px;border:1px solid var(--border);background:rgba(6,17,32,.94);box-shadow:var(--shadow)}.mobile-contact-bar .btn{min-height:50px}}
+    @media (max-width:1080px){.hero-card,.service-grid,.trust-grid,.cta-shell,.form-grid,.footer-grid,.hero-quick-points,.compare-grid,.fit-grid,.scenario-grid,.steps-grid,.before-after-grid,.price-grid,.roi-grid{grid-template-columns:1fr}.hero-card{padding:24px}.footer-links{grid-template-columns:repeat(2,auto)}}
+    @media (max-width:720px){body{padding-bottom:108px}.nav-inner{align-items:flex-start;flex-direction:column}.nav-links{display:none}.section{padding:40px 0}.hero{padding-top:18px}.hero-card,.panel-card,.service-card,.proof-card,.cta-shell,.contact-card,.compare-card,.fit-card,.scenario-card,.step-card,.before-after-card{padding:20px}.cta .btn,.cookie-actions .btn{width:100%}.cookie-inner{flex-direction:column;align-items:flex-start}.mobile-contact-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:180;display:grid;grid-template-columns:1fr auto;gap:10px;padding:8px;border-radius:18px;border:1px solid var(--border);background:rgba(6,17,32,.94);box-shadow:var(--shadow)}.mobile-contact-bar .btn{min-height:50px}}
   </style>
   <script type="application/ld+json">
   {
@@ -194,70 +179,6 @@
         "founder": {
           "@id": "https://bertlclaw.at/#person"
         }
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://bertlclaw.at/#website",
-        "name": "BertlClaw",
-        "url": "https://bertlclaw.at/",
-        "description": "BertlClaw hilft Unternehmen in Österreich, mehr Kunden über ihre Website zu gewinnen.",
-        "publisher": {
-          "@id": "https://bertlclaw.at/#organization"
-        },
-        "inLanguage": "de-AT"
-      },
-      {
-        "@type": "Service",
-        "@id": "https://bertlclaw.at/#website-service",
-        "name": "Mehr Kunden gewinnen",
-        "serviceType": "Website Erstellung und Website Optimierung",
-        "provider": {
-          "@id": "https://bertlclaw.at/#organization"
-        },
-        "areaServed": ["AT","DE","CH"],
-        "description": "BertlClaw erstellt und optimiert Websites für Unternehmen, damit mehr Kunden über die Website anfragen."
-      },
-      {
-        "@type": "Service",
-        "@id": "https://bertlclaw.at/#conversion-service",
-        "name": "Prozesse vereinfachen",
-        "serviceType": "Conversion Optimierung für Websites",
-        "provider": {
-          "@id": "https://bertlclaw.at/#organization"
-        },
-        "areaServed": ["AT","DE","CH"],
-        "description": "BertlClaw verbessert Botschaft, Vertrauen, CTA und mobile Struktur, damit Websites mehr Anfragen erzeugen."
-      },
-      {
-        "@type": "Service",
-        "@id": "https://bertlclaw.at/#handwerker-service",
-        "name": "Handwerker Website verbessern",
-        "serviceType": "Website Optimierung für Handwerker",
-        "provider": {
-          "@id": "https://bertlclaw.at/#organization"
-        },
-        "areaServed": ["AT","DE","CH"],
-        "description": "BertlClaw optimiert Handwerker Websites, damit Leistungen, Einsatzgebiet und Kontakt sofort verständlich sind."
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://bertlclaw.at/#faqpage",
-        "url": "https://bertlclaw.at/#faq",
-        "mainEntity": [
-          {"@type": "Question","name": "Was macht BertlClaw?","acceptedAnswer": {"@type": "Answer","text": "BertlClaw erstellt und verbessert Websites, Landingpages und Texte. Ziel ist: mehr Anfragen über deine Website."}},
-          {"@type": "Question","name": "Für wen ist BertlClaw geeignet?","acceptedAnswer": {"@type": "Answer","text": "Für Unternehmen, Selbstständige und Dienstleister, die mehr Kunden gewinnen, Prozesse verbessern oder Digitalisierung sinnvoll umsetzen wollen."}},
-          {"@type": "Question","name": "Wie hilft BertlClaw mehr Anfragen zu bekommen?","acceptedAnswer": {"@type": "Answer","text": "BertlClaw macht Angebot, Kommunikation und nächsten Schritt klarer. So entstehen mehr qualifizierte Anfragen und weniger unnötige Reibung."}},
-          {"@type": "Question","name": "Was kostet eine Website bei BertlClaw?","acceptedAnswer": {"@type": "Answer","text": "Das hängt vom Thema ab. BertlClaw startet mit einer klaren Ersteinschätzung und zeigt dann, welcher Schritt wirklich sinnvoll ist."}},
-          {"@type": "Question","name": "Wie schnell ist die Umsetzung?","acceptedAnswer": {"@type": "Answer","text": "Die Geschwindigkeit hängt vom Thema ab. Nach der Anfrage wird zuerst der sinnvollste und wirtschaftlichste Startpunkt festgelegt."}},
-          {"@type": "Question","name": "Warum verlieren viele Websites Kunden?","acceptedAnswer": {"@type": "Answer","text": "Weil Angebot, Nutzen und nächster Schritt oft nicht schnell genug klar werden. Das kostet Vertrauen und Anfragen."}},
-          {"@type": "Question","name": "Was ist eine conversion-optimierte Website?","acceptedAnswer": {"@type": "Answer","text": "Eine starke Seite oder Lösung macht den Nutzen klar, schafft Vertrauen und führt einfach zum nächsten sinnvollen Schritt."}},
-          {"@type": "Question","name": "Warum ist mobile Optimierung wichtig?","acceptedAnswer": {"@type": "Answer","text": "Viele Besucher kommen über das Smartphone. Wenn Texte zu lang sind oder CTAs schlecht sichtbar sind, gehen Anfragen verloren."}},
-          {"@type": "Question","name": "Wie verbessert BertlClaw Vertrauen auf Websites?","acceptedAnswer": {"@type": "Answer","text": "Durch klare Aussagen, nachvollziehbare Struktur, sichtbare Kontaktwege und realistische Belege. So wirkt das Angebot glaubwürdiger."}},
-          {"@type": "Question","name": "Wie läuft ein Projekt ab?","acceptedAnswer": {"@type": "Answer","text": "Du schickst Website-Link, Problem oder kurze Beschreibung. Danach folgt eine klare Einordnung mit sinnvollem nächsten Schritt."}},
-          {"@type": "Question","name": "Ist BertlClaw für Handwerksbetriebe geeignet?","acceptedAnswer": {"@type": "Answer","text": "Ja. Leistungen, Einsatzgebiet, Vertrauen und Kontakt werden so angeordnet, dass Besucher schneller anfragen."}},
-          {"@type": "Question","name": "Ist BertlClaw für lokale Dienstleister in Österreich geeignet?","acceptedAnswer": {"@type": "Answer","text": "Ja. BertlClaw ist für Anbieter aus der Region in Österreich gedacht, die regional besser verstanden werden und mehr Anfragen bekommen wollen."}},
-          {"@type": "Question","name": "Warum ist BertlClaw für GEO geeignet?","acceptedAnswer": {"@type": "Answer","text": "Weil Inhalte klar formuliert, semantisch sauber aufgebaut und mit FAQ- sowie Service-Schema ergänzt sind. Das macht die Seite leichter auslesbar."}}
-        ]
       }
     ]
   }
@@ -275,10 +196,9 @@
       <div class="nav-links">
         <a href="services.html">Leistungen</a>
         <a href="#fuer-wen">Für wen</a>
-        <a href="#probleme">Probleme</a>
         <a href="#vergleich">Vergleich</a>
-        <a href="#ablauf">Ablauf</a>
-        <a href="#faq">FAQ</a>
+        <a href="#proof">Beispiele</a>
+        <a href="#kontakt">Kontakt</a>
       </div>
       <div class="nav-actions">
         <a class="mini-btn nav-cta" href="#kontakt">Jetzt kostenlose Einschätzung sichern</a>
@@ -292,6 +212,11 @@
         <section aria-labelledby="hero-heading">
           <span class="eyebrow">Für Unternehmen, die mehr Kunden gewinnen und klarer arbeiten wollen</span>
           <h1 id="hero-heading">Mehr Anfragen, klarere Abläufe und digitale Lösungen, die wirklich helfen.</h1>
+          <div class="cta" style="margin-top:0;margin-bottom:14px;">
+            <a class="btn btn-primary" href="#kontakt">Jetzt kostenlose Einschätzung sichern</a>
+            <a class="btn btn-secondary" href="services.html">Leistungen mit klarem Nutzen ansehen</a>
+          </div>
+          <p class="muted" style="margin-top:0;">Kein langes Briefing nötig. Kurze Nachricht reicht. Unverbindlich.</p>
           <div class="video-block" aria-label="Kurze Leistungsbeschreibung als Video">
             <div class="video-shell">
               <button class="video-poster" type="button" aria-label="Hero-Video abspielen: Kurze Leistungsbeschreibung BertlClaw" data-video-embed="https://www.youtube-nocookie.com/embed/ahEUOZ7Ba4Q?autoplay=1&rel=0&modestbranding=1&playsinline=1&mute=1" data-video-title="Kurze Leistungsbeschreibung BertlClaw" style="background-image:url('bertlclaw-assets/video-poster-hero.jpg');">
@@ -302,29 +227,24 @@
             </div>
             <div class="video-inline-cta">
               <p>Du willst schnell wissen, ob sich eine Anfrage gerade lohnt?</p>
-              <a class="btn btn-primary" href="#kontakt">Kostenlose Einschätzung sichern</a>
+              <a class="btn btn-primary" href="#kontakt">Jetzt kostenlose Einschätzung sichern</a>
             </div>
           </div>
           <p class="lead">Du bekommst eine klare Website, weniger Chaos im Alltag und einen einfachen nächsten Schritt, statt Agentur-Gerede, Einzelkämpfer-Risiko oder internem Stillstand.</p>
           <div class="hero-proof">
             <div class="trust-card">
-              <strong>Was macht BertlClaw?</strong>
-              <p>BertlClaw verbessert Websites, Prozesse und digitale Abläufe, damit Unternehmen einfacher Kunden gewinnen und sauberer arbeiten.</p>
+              <strong>Was bringt dir das?</strong>
+              <p>Mehr passende Anfragen, weniger unnötige Rückfragen und klarere Entscheidungen.</p>
             </div>
             <div class="trust-card">
-              <strong>Für wen ist das gedacht?</strong>
-              <p>Für Unternehmen, Selbstständige und Dienstleister, die online klarer auftreten und intern einfacher arbeiten wollen.</p>
+              <strong>Warum BertlClaw?</strong>
+              <p>Weil hier nicht in Technik gedacht wird, sondern in Geschäftsergebnis, Klarheit und sauberer Umsetzung.</p>
             </div>
             <div class="trust-card">
-              <strong>Was ist das Ergebnis?</strong>
-              <p>Mehr Anfragen, weniger unnötige Reibung und digitale Lösungen, die im Alltag wirklich helfen.</p>
+              <strong>Wie startest du?</strong>
+              <p>Mit einer kurzen Nachricht. Kein langes Briefing, kein komplizierter Start.</p>
             </div>
           </div>
-          <div class="cta">
-            <a class="btn btn-primary" href="#kontakt">Jetzt kostenlose Einschätzung sichern</a>
-            <a class="btn btn-secondary" href="services.html">Leistungen mit klarem Nutzen ansehen</a>
-          </div>
-          <p class="muted" style="margin-top:10px;">Kein langes Briefing nötig. Kurze Nachricht reicht. Unverbindlich.</p>
           <div class="hero-quick-points" aria-label="Direkt extrahierbare Kernaussagen">
             <div class="quick-point"><strong>Mehr Kunden gewinnen</strong><span>Klare Seiten und klare Angebote bringen mehr qualifizierte Anfragen.</span></div>
             <div class="quick-point"><strong>Prozesse vereinfachen</strong><span>Weniger Reibung, weniger Rückfragen, mehr Zeit fürs Wesentliche.</span></div>
@@ -345,32 +265,84 @@
       <div class="wrap">
         <div class="section-header">
           <span class="micro-label">Für wen BertlClaw geeignet ist</span>
-          <h2>Wann BertlClaw für Unternehmen sinnvoll ist</h2>
-          <p class="muted">BertlClaw ist sinnvoll, wenn ein Unternehmen mehr Kunden gewinnen, Prozesse verbessern, Digitalisierung umsetzen oder ein feststeckendes Projekt endlich voranbringen will.</p>
+          <h2>Das ist für dich, wenn ... und nicht für dich, wenn ...</h2>
+          <p class="muted">So erkennen passende Kunden in wenigen Sekunden, ob sich eine Anfrage lohnt.</p>
         </div>
-        <div class="service-grid">
-          <article class="service-card">
-            <h3>Handwerk</h3>
+        <div class="trust-grid">
+          <div class="proof-stack">
+            <article class="proof-card">
+              <h3>Das ist für dich, wenn ...</h3>
+              <ul class="problem-list">
+                <li>du viele Besucher hast, aber zu wenige Anfragen kommen</li>
+                <li>du oft erklären musst, was du eigentlich anbietest</li>
+                <li>dein Team wegen unklarer Abläufe Zeit verliert</li>
+                <li>digitale Themen offen sind, aber niemand sauber entscheidet, was zuerst dran ist</li>
+                <li>du eine pragmatische Lösung willst statt monatelanger Vorarbeit</li>
+              </ul>
+            </article>
+            <article class="proof-card">
+              <h3>Das ist nicht für dich, wenn ...</h3>
+              <ul class="problem-list">
+                <li>du nur irgendwen suchst, der es möglichst billig macht</li>
+                <li>du nur schöne Gestaltung willst, auch wenn sie keine Anfragen bringt</li>
+                <li>du intern genug Zeit, Klarheit und Umsetzungsstärke hast</li>
+                <li>du eigentlich keine Veränderung willst, sondern nur Bestätigung</li>
+              </ul>
+            </article>
+          </div>
+          <aside class="contact-card">
+            <span class="top-badge">Warum BertlClaw anders arbeitet</span>
+            <h3>Keine typische Agentur-Logik</h3>
+            <ul class="mini-proof-list">
+              <li>erst Klarheit, dann Umsetzung</li>
+              <li>weniger Gerede, mehr brauchbare Schritte</li>
+              <li>schnelle Einordnung statt langer Vorphase</li>
+              <li>Websites als Teil der Lösung, nicht als Selbstzweck</li>
+              <li>klare Ergebnisse statt abstrakter Beratung</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section trust" id="vergleich">
+      <div class="wrap">
+        <div class="section-header">
+          <span class="micro-label">Warum BertlClaw statt typischer Alternativen</span>
+          <h2>Warum BertlClaw oft die bessere Wahl ist</h2>
+          <p class="muted">Besucher vergleichen immer. Diese Sektion macht den Unterschied direkt vor der Anfrage sichtbar.</p>
+        </div>
+        <div class="compare-grid">
+          <article class="compare-card">
+            <h3>Typische Agentur</h3>
             <ul>
-              <li>Für Betriebe, die mehr passende Anfragen wollen</li>
-              <li>Für verständliche Angebote und weniger Leerlauf im Vertrieb</li>
-              <li>Für Handwerker, die klarer auftreten und leichter angefragt werden wollen</li>
+              <li>oft viel Konzept, bevor etwas sichtbar besser wird</li>
+              <li>mehr Abstimmung, mehr Schleifen, mehr Zeitverlust</li>
+              <li>du kaufst leicht viel Leistung, aber nicht den größten Hebel</li>
             </ul>
           </article>
-          <article class="service-card">
-            <h3>Lokale Dienstleister</h3>
+          <article class="compare-card">
+            <h3>Einzelner Freelancer</h3>
             <ul>
-              <li>Für Anbieter in Österreich mit regionalem Einzugsgebiet</li>
-              <li>Für Angebote, die online zu wenig Wirkung haben</li>
-              <li>Für klarere Kommunikation und einfachere Kontaktwege</li>
+              <li>gut für Einzelleistungen, aber oft zu eng gedacht</li>
+              <li>schaut meist nur auf Design, Text oder Technik</li>
+              <li>der Blick aufs ganze Geschäft fehlt oft</li>
             </ul>
           </article>
-          <article class="service-card">
-            <h3>Beratung und erklärungsbedürftige Leistungen</h3>
+          <article class="compare-card">
+            <h3>Interne Umsetzung</h3>
             <ul>
-              <li>Für Leistungen, die Kunden nicht sofort verstehen</li>
-              <li>Für klarere Nutzenkommunikation</li>
-              <li>Für bessere Gespräche statt unpassender Anfragen</li>
+              <li>wird oft nach hinten geschoben</li>
+              <li>niemand hat genug Abstand für klare Entscheidungen</li>
+              <li>Website, Prozesse und Umsetzung bleiben halb fertig</li>
+            </ul>
+          </article>
+          <article class="compare-card highlight">
+            <h3>BertlClaw</h3>
+            <ul>
+              <li>fokussiert zuerst auf den größten Hebel</li>
+              <li>klare Sprache statt Fachbegriffe und leerer Konzepte</li>
+              <li>mehr Anfragen, bessere Abläufe, klare Umsetzung</li>
             </ul>
           </article>
         </div>
@@ -378,6 +350,7 @@
           <a class="btn btn-primary" href="#kontakt">Jetzt kostenlose Einschätzung sichern</a>
           <a class="btn btn-secondary" href="#kontakt">In 24h klare Antwort erhalten</a>
         </div>
+        <p class="muted" style="margin-top:10px;">Kurze Nachricht reicht. Kein langes Briefing nötig. Unverbindlich.</p>
       </div>
     </section>
 
@@ -413,28 +386,110 @@
               <li><strong>Ergebnis:</strong> Mehr passende Anfragen und klarere Erstgespräche.</li>
             </ul>
           </article>
-          <article class="panel-card">
-            <h3>Für Dienstleister</h3>
-            <ul class="problem-list">
-              <li><strong>Problem:</strong> Kunden verstehen zu spät, warum das Angebot relevant ist.</li>
-              <li><strong>Lösung:</strong> BertlClaw macht Nutzen, Unterschied und nächsten Schritt klarer.</li>
-              <li><strong>Ergebnis:</strong> Gespräche werden klarer und passende Anfragen wahrscheinlicher.</li>
-            </ul>
-          </article>
         </div>
         <div class="cta">
-          <a class="btn btn-primary" href="#kontakt">Kostenlose Einschätzung sichern</a>
-          <a class="btn btn-secondary" href="#kontakt">Jetzt Anfrage stellen</a>
+          <a class="btn btn-primary" href="#kontakt">Jetzt kostenlose Einschätzung sichern</a>
+          <a class="btn btn-secondary" href="#kontakt">In 24h klare Antwort erhalten</a>
         </div>
+        <p class="muted" style="margin-top:10px;">Kein langes Briefing nötig. Kurze Nachricht reicht. Unverbindlich.</p>
+      </div>
+    </section>
+
+    <section class="section trust" id="proof">
+      <div class="wrap">
+        <div class="section-header">
+          <span class="micro-label">Proof und Vertrauen</span>
+          <h2>Vorher, nachher und greifbare Mini-Szenarien</h2>
+          <p class="muted">Keine Fake-Zahlen. Stattdessen realistische Situationen, die Besucher sofort verstehen.</p>
+        </div>
+        <div class="proof-stack">
+          <article class="proof-card">
+            <h3>Vorher und nachher</h3>
+            <div class="before-after-grid">
+              <div class="before-after-card">
+                <strong>Vorher</strong>
+                <ul>
+                  <li>unklare Website</li>
+                  <li>zu wenig passende Anfragen</li>
+                  <li>Chaos bei Prioritäten und Abläufen</li>
+                </ul>
+              </div>
+              <div class="before-after-card">
+                <strong>Nachher</strong>
+                <ul>
+                  <li>klare Struktur und klare Botschaft</li>
+                  <li>einfacherer Weg zur Anfrage</li>
+                  <li>bessere Abläufe und klare nächste Schritte</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="proof-card">
+            <h3>Konkrete Mini-Szenarien</h3>
+            <div class="scenario-grid">
+              <article class="scenario-card">
+                <h3>Handwerksbetrieb</h3>
+                <p><strong>Ausgangssituation:</strong> gute Arbeit, aber online zu wenig passende Anfragen.</p>
+                <p><strong>Problem:</strong> Leistungen und Einsatzgebiet waren auf der Website zu unklar.</p>
+                <p><strong>Ergebnis:</strong> klarere Erstgespräche und weniger unnötige Rückfragen.</p>
+              </article>
+              <article class="scenario-card">
+                <h3>Lokaler Dienstleister</h3>
+                <p><strong>Ausgangssituation:</strong> die Leistung war stark, wirkte online aber austauschbar.</p>
+                <p><strong>Problem:</strong> Besucher haben den Unterschied zu spät verstanden.</p>
+                <p><strong>Ergebnis:</strong> mehr Vertrauen und bessere Anfragequalität.</p>
+              </article>
+              <article class="scenario-card">
+                <h3>KMU mit vielen Baustellen</h3>
+                <p><strong>Ausgangssituation:</strong> Website, Prozesse und Digitalisierung hingen gleichzeitig fest.</p>
+                <p><strong>Problem:</strong> niemand wusste, was zuerst angegangen werden soll.</p>
+                <p><strong>Ergebnis:</strong> klarere Prioritäten und weniger Stillstand.</p>
+              </article>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="preise-orientierung">
+      <div class="wrap">
+        <div class="section-header">
+          <span class="micro-label">Preis Orientierung</span>
+          <h2>Womit du ungefähr rechnen kannst</h2>
+          <p class="muted">Keine Fantasiepreise und kein starres Paket. Aber eine ehrliche Orientierung hilft, schneller zu entscheiden.</p>
+        </div>
+        <div class="price-grid">
+          <article class="price-card">
+            <h3>Kurzer Einstieg</h3>
+            <p><strong>ab ca. 300 bis 800 Euro</strong></p>
+            <p>Wenn du zuerst Klarheit brauchst, wo der größte Hebel liegt und was als Nächstes Sinn macht.</p>
+          </article>
+          <article class="price-card">
+            <h3>Website oder Angebots-Schärfung</h3>
+            <p><strong>oft ab ca. 1.000 bis 3.000 Euro</strong></p>
+            <p>Wenn Texte, Struktur und Anfrageweg klarer werden sollen, damit mehr passende Anfragen entstehen.</p>
+          </article>
+          <article class="price-card">
+            <h3>Abläufe oder Digitalisierung sortieren</h3>
+            <p><strong>oft ab ca. 1.500 bis 4.000 Euro</strong></p>
+            <p>Wenn Prozesse zu viel Zeit kosten oder digitale Themen endlich sauber eingeordnet werden sollen.</p>
+          </article>
+          <article class="price-card">
+            <h3>Größere Umsetzung</h3>
+            <p><strong>je nach Umfang individuell</strong></p>
+            <p>Wenn mehrere Themen gleichzeitig angegangen werden, zum Beispiel Website, Prozesse und Umsetzung.</p>
+          </article>
+        </div>
+        <p class="muted" style="margin-top:14px;">Wichtig: Der genaue Aufwand hängt immer davon ab, wie klar die Ausgangslage schon ist und wie viel wirklich gebraucht wird.</p>
       </div>
     </section>
 
     <section class="section trust" id="ablauf">
       <div class="wrap">
         <div class="section-header">
-          <span class="micro-label">Wie die Umsetzung abläuft</span>
-          <h2>So läuft ein Projekt mit BertlClaw ab</h2>
-          <p class="muted">Der Ablauf ist einfach. Du weißt sofort, was passiert.</p>
+          <span class="micro-label">Was passiert nach deiner Anfrage?</span>
+          <h2>So läuft der Einstieg mit BertlClaw ab</h2>
+          <p class="muted">Die Unsicherheit vor der Anfrage sinkt, wenn der Ablauf glasklar ist.</p>
         </div>
         <div class="steps-grid">
           <article class="step-card"><div class="step-number">1</div><div><h3>Anfrage senden</h3><p>Du schickst einen Link, Screenshot oder kurzen Text. Mehr braucht es nicht.</p></div></article>
@@ -450,223 +505,42 @@
       </div>
     </section>
 
-    <section class="section problem-solution" id="leistungen">
+    <section class="section trust" id="entscheidung">
       <div class="wrap">
         <div class="section-header">
-          <span class="micro-label">Leistungen und Angebotsmodule</span>
-          <h2>Welche Ergebnisse BertlClaw liefert</h2>
-          <p class="muted">Hier siehst du, was du konkret bekommst. Ohne unklare Pakete.</p>
-        </div>
-        <div class="service-grid">
-          <article class="service-card">
-            <h3>Mehr Kunden gewinnen</h3>
-            <ul>
-              <li>klare Kommunikation für mehr Anfragen</li>
-              <li>klarer Weg vom Interesse zur Anfrage</li>
-              <li>verständliche Nutzenargumente statt leerer Werbesprache</li>
-            </ul>
-          </article>
-          <article class="service-card">
-            <h3>Prozesse vereinfachen</h3>
-            <ul>
-              <li>Abläufe vereinfachen und Zeit sparen</li>
-              <li>unnötige Schleifen reduzieren</li>
-              <li>Zeit sparen und Fehler reduzieren</li>
-            </ul>
-          </article>
-          <article class="service-card">
-            <h3>Digitalisierung und Automatisierung</h3>
-            <ul>
-              <li>Digitalisierung sinnvoll priorisieren</li>
-              <li>KI und IT verständlich entscheiden</li>
-              <li>von der Einordnung in die Umsetzung kommen</li>
-            </ul>
-          </article>
-        </div>
-        <div class="video-block" aria-label="Vertrauensvideo über BertlClaw">
-          <div class="video-shell">
-            <button class="video-poster" type="button" aria-label="Trust-Video abspielen: So arbeitet BertlClaw" data-video-embed="https://www.youtube-nocookie.com/embed/ahEUOZ7Ba4Q?autoplay=1&rel=0&modestbranding=1&playsinline=1&mute=1" data-video-title="So arbeitet BertlClaw" style="background-image:url('bertlclaw-assets/video-poster-trust.jpg');">
-              <span class="video-poster-content">
-                <span class="video-play" aria-hidden="true"></span>
-              </span>
-            </button>
-          </div>
-          <div class="video-inline-cta">
-            <p>Wenn das für dich sinnvoll klingt, reicht jetzt eine kurze Anfrage. Danach weißt du schnell, ob und wie es weitergeht.</p>
-            <a class="btn btn-primary" href="#kontakt">Jetzt Anfrage stellen</a>
-          </div>
-        </div>
-        <div class="cta">
-          <a class="btn btn-primary" href="#kontakt">Kostenlose Einschätzung sichern</a>
-          <a class="btn btn-secondary" href="#kontakt">Jetzt Anfrage stellen</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section services" id="einstieg">
-      <div class="wrap">
-        <div class="section-header">
-          <span class="micro-label">Einfacher Start</span>
-          <h2>Der klare Einstieg mit BertlClaw</h2>
-          <p class="muted">Wenn du noch nicht weißt, welches Thema zuerst angegangen werden soll, ist dieses Einstiegsangebot der einfachste Start.</p>
-        </div>
-        <div class="cta-shell">
-          <div>
-            <h3>Kurze Ersteinschätzung</h3>
-            <p class="muted">Du bekommst keine vage Ersteinschätzung, sondern eine klare erste Einordnung. Nach kurzer Sichtung weißt du, was gerade bremst, was zuerst angegangen werden sollte und wo der größte Hebel liegt.</p>
-            <ul class="problem-list">
-              <li><strong>Was gerade falsch läuft:</strong> wo Website, Prozesse, Digitalisierung oder Projektlage unnötig bremsen</li>
-              <li><strong>Was du zuerst angehen solltest:</strong> der eine nächste Schritt, der am meisten Sinn macht</li>
-              <li><strong>Was den größten Effekt bringt:</strong> der Bereich, der am schnellsten Klarheit, Zeitgewinn oder mehr Anfragen bringt</li>
-            </ul>
-            <div class="cta">
-              <a class="btn btn-primary" href="#contactForm">Kostenlose Einschätzung sichern</a>
-              <a class="btn btn-secondary" href="#kontakt">Jetzt Anfrage stellen</a>
-            </div>
-          </div>
-          <div class="contact-card">
-            <span class="top-badge">Niedrige Hürde</span>
-            <h3>Ideal, wenn du noch unsicher bist</h3>
-            <p>Du musst kein komplettes Briefing vorbereiten. Ein Link, ein Screenshot oder ein kurzer Text reichen, damit du schnell eine klare erste Richtung bekommst.</p>
-            <p><strong>Gut geeignet für:</strong> Unternehmen, Selbstständige und Dienstleister, die vor einer größeren Entscheidung zuerst Klarheit wollen.</p>
-            <p><strong>Wichtig:</strong> Rückmeldung erfolgt in der Regel schnell und nur in begrenzter Zahl parallel, damit die Einschätzung konkret bleibt.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section trust" id="fuer-dich">
-      <div class="wrap">
-        <div class="section-header">
-          <span class="micro-label">Einordnung</span>
-          <h2>Das ist für dich, wenn ... und nicht für dich, wenn ...</h2>
-          <p class="muted">So wird schneller klar, ob BertlClaw wirklich passt oder ob etwas anderes sinnvoller wäre.</p>
-        </div>
-        <div class="trust-grid">
-          <div class="proof-stack">
-            <article class="proof-card"><h3>Das ist für dich, wenn ...</h3><ul class="problem-list"><li>du mehr qualifizierte Anfragen willst</li><li>dein Angebot zu unklar wirkt</li><li>Prozesse unnötig Zeit kosten</li><li>Digitalisierung gewollt ist, aber niemand sauber priorisiert</li><li>du schnelle, praktische Ergebnisse willst statt langer Theorie</li></ul></article>
-            <article class="proof-card"><h3>Das ist nicht für dich, wenn ...</h3><ul class="problem-list"><li>du nur die billigste Umsetzung suchst</li><li>du vor allem lange Konzepte statt echter Umsetzung willst</li><li>du eigentlich schon genau weißt, was intern sauber gelöst werden kann</li><li>du nur schöne Optik willst, aber keine geschäftliche Wirkung</li></ul></article>
-          </div>
-          <aside class="contact-card">
-            <span class="top-badge">Warum BertlClaw anders arbeitet</span>
-            <h3>Keine typische Agentur-Logik</h3>
-            <ul class="mini-proof-list">
-              <li>erst Klarheit, dann Umsetzung</li>
-              <li>weniger Gerede, mehr brauchbare Schritte</li>
-              <li>schnelle Einordnung statt langer Vorphase</li>
-              <li>Websites als Teil der Lösung, nicht als Selbstzweck</li>
-              <li>klare Ergebnisse statt abstrakter Beratung</li>
-            </ul>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section class="section services" id="typische-situationen">
-      <div class="wrap">
-        <div class="section-header">
-          <span class="micro-label">Typische Situationen</span>
-          <h2>In diesen Situationen wird BertlClaw oft angefragt</h2>
-          <p class="muted">Der schnellste Vertrauensaufbau entsteht oft dann, wenn man die eigene Lage sofort wiedererkennt.</p>
-        </div>
-        <div class="service-grid">
-          <article class="service-card"><h3>Handwerker</h3><p>Die Arbeit ist gut, aber online wird zu wenig klar, was angeboten wird, wo gearbeitet wird und warum man anfragen sollte.</p></article>
-          <article class="service-card"><h3>KMU</h3><p>Es gibt viele Themen gleichzeitig. Website, Prozesse und Digitalisierung hängen zusammen, aber niemand priorisiert sauber.</p></article>
-          <article class="service-card"><h3>Dienstleister</h3><p>Die Leistung ist eigentlich stark, wird aber zu allgemein erklärt. Dadurch entstehen zu wenige passende Anfragen.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section trust" id="proof">
-      <div class="wrap">
-        <div class="section-header">
-          <span class="micro-label">Proof und Vertrauen</span>
-          <h2>Woran man hier echte Verbesserung erkennt</h2>
-          <p class="muted">Keine erfundenen Kundenstimmen, keine Fantasie-Zahlen. Stattdessen typische Situationen, sichtbare Vorher-nachher-Unterschiede und realistische Ergebnisse.</p>
+          <span class="micro-label">Entscheidungshilfe</span>
+          <h2>Wann lohnt sich das und wann eher nicht?</h2>
+          <p class="muted">Diese Klarheit spart beiden Seiten Zeit und verbessert die Qualität der Anfragen.</p>
         </div>
         <div class="trust-grid">
           <div class="proof-stack">
             <article class="proof-card">
-              <h3>Typische Situationen unserer Kunden</h3>
-              <p>Die Website erklärt zu viel und verkauft zu wenig. Angebote wirken unklar. Prozesse kosten unnötig Zeit. Digitalisierung ist gewollt, aber es fehlt ein einfacher Start.</p>
+              <h3>Wann lohnt sich das?</h3>
+              <ul class="problem-list">
+                <li>wenn dir schon wenige bessere Anfragen einen klaren Unterschied machen</li>
+                <li>wenn unklare Abläufe dein Team regelmäßig Zeit kosten</li>
+                <li>wenn Entscheidungen zu lange liegen bleiben und niemand sauber priorisiert</li>
+                <li>wenn du lieber einmal klar sortierst statt monatelang herumzuprobieren</li>
+              </ul>
             </article>
             <article class="proof-card">
-              <h3>Vorher und nachher</h3>
-              <div class="before-after-grid">
-                <div class="before-after-card"><strong>Vorher</strong><ul><li>unklare Website</li><li>zu wenig passende Anfragen</li><li>Chaos bei Prioritäten und Abläufen</li></ul></div>
-                <div class="before-after-card"><strong>Nachher</strong><ul><li>klare Struktur und klare Botschaft</li><li>einfacherer Weg zur Anfrage</li><li>bessere Abläufe und klare nächste Schritte</li></ul></div>
-              </div>
-            </article>
-            <article class="proof-card">
-              <h3>Konkrete Mini-Szenarien</h3>
-              <div class="scenario-grid">
-                <article class="scenario-card"><h3>Handwerksbetrieb</h3><p><strong>Ausgangssituation:</strong> gute Arbeit, aber online zu wenig passende Anfragen.</p><p><strong>Problem:</strong> Leistungen und Einsatzgebiet waren auf der Website zu unklar.</p><p><strong>Ergebnis:</strong> klarere Erstgespräche und weniger unnötige Rückfragen.</p></article>
-                <article class="scenario-card"><h3>Lokaler Dienstleister</h3><p><strong>Ausgangssituation:</strong> die Leistung war stark, wirkte online aber austauschbar.</p><p><strong>Problem:</strong> Besucher haben den Unterschied zu spät verstanden.</p><p><strong>Ergebnis:</strong> mehr Vertrauen und bessere Anfragequalität.</p></article>
-                <article class="scenario-card"><h3>KMU mit vielen Baustellen</h3><p><strong>Ausgangssituation:</strong> Website, Prozesse und Digitalisierung hingen gleichzeitig fest.</p><p><strong>Problem:</strong> niemand wusste, was zuerst angegangen werden soll.</p><p><strong>Ergebnis:</strong> klarere Prioritäten und weniger Stillstand.</p></article>
-              </div>
+              <h3>Wann eher nicht?</h3>
+              <ul class="problem-list">
+                <li>wenn du nur den billigsten Preis suchst</li>
+                <li>wenn gerade gar keine Zeit für Umsetzung da ist</li>
+                <li>wenn intern bereits alles klar läuft und nur noch abgearbeitet werden muss</li>
+                <li>wenn du nur Ideen sammeln willst, aber nichts verändern möchtest</li>
+              </ul>
             </article>
           </div>
-          <aside class="contact-card">
-            <span class="top-badge">Mini-Beispiele</span>
-            <h3>Typische Beispiele aus ähnlichen Situationen</h3>
-            <ul class="mini-proof-list">
-              <li><strong>Handwerker:</strong> Ausgangssituation: gute Arbeit, aber wenig passende Anfragen. Problem: Leistungen und Region waren online zu unklar. Verändert wurde: klare Leistungsdarstellung, klarer Kontaktweg. Ergebnis: bessere Erstgespräche und weniger unnötige Rückfragen.</li>
-              <li><strong>KMU:</strong> Ausgangssituation: zu viele Themen gleichzeitig. Problem: niemand wusste, was zuerst angegangen werden sollte. Verändert wurde: klare Priorisierung und einfacherer Start. Ergebnis: weniger Stillstand und klarere nächste Schritte.</li>
-              <li><strong>Dienstleister:</strong> Ausgangssituation: Angebot war gut, wirkte aber austauschbar. Problem: Nutzen wurde zu spät verstanden. Verändert wurde: klarere Sprache und stärkere Angebotslogik. Ergebnis: mehr Verständnis und bessere Anfragequalität.</li>
-            </ul>
-            <div class="cta">
-              <a class="btn btn-primary" href="#kontakt">Jetzt kostenlose Einschätzung sichern</a>
-              <a class="btn btn-secondary" href="#kontakt">In 24h klare Antwort erhalten</a>
+          <article class="contact-card">
+            <h3>Was kostet Nichtstun?</h3>
+            <div class="roi-grid">
+              <div class="roi-card"><strong>Ohne Veränderung</strong><p>weiter unklare Anfragen, mehr Rückfragen, mehr Zeitverlust und vertane Chancen.</p></div>
+              <div class="roi-card"><strong>Mit sauberer Lösung</strong><p>klarere Gespräche, weniger Reibung und schnellere Entscheidungen, die im Alltag wirklich etwas bringen.</p></div>
             </div>
-          </aside>
-        </div>
-        <div class="cta">
-          <a class="btn btn-primary" href="#kontakt">Jetzt Anfrage stellen</a>
-          <a class="btn btn-secondary" href="#kontakt">Kostenlose Einschätzung sichern</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section problem-solution" id="geo-answers">
-      <div class="wrap">
-        <div class="section-header">
-          <span class="micro-label">Klare Antworten</span>
-          <h2>Kurze Antworten auf wichtige Fragen</h2>
-          <p class="muted">Einfach formuliert, schnell erfassbar und leicht für Menschen und KI-Systeme auszulesen.</p>
-        </div>
-        <div class="proof-stack">
-          <article class="panel-card"><h3>Wie bekomme ich mehr Kunden?</h3><p>Mehr Kunden kommen meist dann, wenn dein Angebot schneller verstanden wird, Vertrauen früher sichtbar ist und der nächste Schritt klar ist. BertlClaw verbessert dafür Website, Texte, Struktur und Anfrageweg.</p></article>
-          <article class="panel-card"><h3>Wie kann ich Prozesse verbessern?</h3><p>Prozesse werden besser, wenn unnötige Schritte entfernt, Aufgaben klar verteilt und wiederkehrende Arbeiten einfacher gemacht werden. BertlClaw hilft dabei, Abläufe verständlich und praktikabel zu machen.</p></article>
-          <article class="panel-card"><h3>Wie kann ich Digitalisierung umsetzen?</h3><p>Digitalisierung gelingt am besten mit kleinen sinnvollen Schritten. Erst wird geklärt, was wirklich hilft, dann werden passende Lösungen ausgewählt und sauber umgesetzt.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section cta-section" id="faq">
-      <div class="wrap">
-        <div class="section-header">
-          <span class="micro-label">FAQ für GEO</span>
-          <h2>Häufige Fragen zu BertlClaw</h2>
-          <p class="muted">Kurze Antworten in einfacher Sprache. Gut für Menschen, Google und KI-Systeme.</p>
-        </div>
-        <div class="proof-stack">
-          <article class="contact-card"><h3>Was macht BertlClaw?</h3><p>BertlClaw erstellt und verbessert Websites, Landingpages und Texte. Ziel ist: mehr Anfragen über deine Website.</p></article>
-          <article class="contact-card"><h3>Für wen ist BertlClaw geeignet?</h3><p>Für Unternehmen, Selbstständige und Dienstleister, die mehr Kunden gewinnen, Prozesse verbessern oder Digitalisierung sinnvoll umsetzen wollen.</p></article>
-          <article class="contact-card"><h3>Wie hilft BertlClaw mehr Anfragen zu bekommen?</h3><p>BertlClaw macht Angebot, Kommunikation und nächsten Schritt klarer. So entstehen mehr qualifizierte Anfragen und weniger unnötige Reibung.</p></article>
-          <article class="contact-card"><h3>Was kostet eine Website bei BertlClaw?</h3><p>Das hängt vom Thema ab. BertlClaw startet mit einer klaren Ersteinschätzung und zeigt dann, welcher Schritt wirklich sinnvoll ist.</p></article>
-          <article class="contact-card"><h3>Wie schnell ist die Umsetzung?</h3><p>Die Geschwindigkeit hängt vom Thema ab. Nach der Anfrage wird zuerst der sinnvollste und wirtschaftlichste Startpunkt festgelegt.</p></article>
-          <article class="contact-card"><h3>Warum verlieren viele Websites Kunden?</h3><p>Nutzen, Vertrauen und nächster Schritt sind oft nicht sofort klar. Viele Seiten erklären zu viel und führen zu wenig.</p></article>
-          <article class="contact-card"><h3>Was ist eine conversion-optimierte Website?</h3><p>Eine starke Seite oder Lösung macht den Nutzen klar, schafft Vertrauen und führt einfach zum nächsten sinnvollen Schritt.</p></article>
-          <article class="contact-card"><h3>Warum ist mobile Optimierung wichtig?</h3><p>Viele Besucher kommen über das Smartphone. Wenn Texte zu lang sind oder CTAs schlecht sichtbar sind, gehen Anfragen verloren.</p></article>
-          <article class="contact-card"><h3>Wie verbessert BertlClaw Vertrauen auf Websites?</h3><p>Durch klare Aussagen, nachvollziehbare Struktur, sichtbare Kontaktwege und realistische Belege. So wirkt das Angebot glaubwürdiger.</p></article>
-          <article class="contact-card"><h3>Wie läuft ein Projekt ab?</h3><p>Du schickst Website-Link, Problem oder kurze Beschreibung. Danach folgt eine klare Einordnung mit sinnvollem nächsten Schritt.</p></article>
-          <article class="contact-card"><h3>Ist BertlClaw für Handwerksbetriebe geeignet?</h3><p>Ja. Leistungen, Einsatzgebiet, Vertrauen und Kontakt werden so angeordnet, dass Besucher schneller anfragen.</p></article>
-          <article class="contact-card"><h3>Ist BertlClaw für lokale Dienstleister in Österreich geeignet?</h3><p>Ja. BertlClaw ist für Anbieter aus der Region in Österreich gedacht, die regional besser verstanden werden und mehr Anfragen bekommen wollen.</p></article>
-          <article class="contact-card"><h3>Warum ist BertlClaw für GEO geeignet?</h3><p>Weil Inhalte klar formuliert, semantisch sauber aufgebaut und mit FAQ- sowie Service-Schema ergänzt sind. Das macht die Seite leichter auslesbar.</p></article>
-        </div>
-        <div class="cta">
-          <a class="btn btn-primary" href="#kontakt">Jetzt Anfrage stellen</a>
-          <a class="btn btn-secondary" href="#contactForm">Kostenlose Einschätzung sichern</a>
+            <p style="margin-top:14px;">Es geht nicht darum, irgendetwas zu kaufen. Es geht darum, ob der Nutzen größer ist als das tägliche Weiterwursteln.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -678,7 +552,7 @@
             <div class="section-header" style="margin-bottom:18px;">
               <span class="micro-label">Kontakt</span>
               <h2>Projekt anfragen</h2>
-              <p class="muted">Schick kurz, was deine Website gerade nicht leistet. Dann bekommst du einen klaren ersten Schritt.</p>
+              <p class="muted">Schick kurz, was gerade bremst. Dann bekommst du einen klaren ersten Schritt.</p>
             </div>
             <div class="proof-stack">
               <article class="contact-card">
@@ -696,7 +570,7 @@
               </article>
             </div>
             <div class="cta">
-              <a class="btn btn-primary" href="#contactForm">Kostenlose Einschätzung sichern</a>
+              <a class="btn btn-primary" href="#contactForm">Jetzt kostenlose Einschätzung sichern</a>
               <a class="btn btn-secondary" href="https://wa.me/436781299919" target="_blank" rel="noopener">Jetzt per WhatsApp anfragen</a>
             </div>
             <p class="muted" style="margin-top:10px;">Kein langes Briefing nötig. Kurze Nachricht reicht. Unverbindlich.</p>
@@ -740,6 +614,7 @@
               <div class="cta">
                 <button class="btn btn-primary" type="submit">Jetzt kostenlose Einschätzung sichern</button>
               </div>
+              <p class="muted" style="margin-top:0;">Kein langes Briefing nötig. Kurze Nachricht reicht. Unverbindlich.</p>
               <div class="form-status" id="contactFormStatus" role="status" aria-live="polite"></div>
             </form>
           </article>
@@ -756,9 +631,9 @@
       </div>
       <div class="footer-links" aria-label="Footer Navigation">
         <a href="index.html">Startseite</a>
-        <a href="#leistungen">Leistungen</a>
-        <a href="#zielgruppen">Zielgruppen</a>
-        <a href="#faq">FAQ</a>
+        <a href="services.html">Leistungen</a>
+        <a href="#fuer-wen">Für wen</a>
+        <a href="#vergleich">Vergleich</a>
         <a href="impressum.html">Impressum</a>
         <a href="datenschutz.html">Datenschutz</a>
       </div>
