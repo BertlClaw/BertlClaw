@@ -77,14 +77,17 @@
     .hero-proof .trust-card{padding:16px 18px;background:var(--panel-soft)}
     .hero-proof strong{display:block;margin-bottom:4px}
     .video-block{display:grid;gap:14px;margin:22px 0 10px}
-    .video-shell{position:relative;overflow:hidden;border-radius:22px;border:1px solid var(--border-strong);background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));box-shadow:var(--shadow)}
+    .video-shell{position:relative;overflow:hidden;border-radius:22px;border:1px solid rgba(147,197,253,.22);background:#071427;box-shadow:0 18px 48px rgba(0,0,0,.34), inset 0 0 0 1px rgba(255,255,255,.03)}
     .video-shell::before{content:"";display:block;padding-top:56.25%}
     .video-poster,.video-embed{position:absolute;inset:0;width:100%;height:100%}
-    .video-poster{display:flex;align-items:flex-end;justify-content:flex-start;padding:22px;background-size:cover;background-position:center;cursor:pointer;border:0;color:var(--text);text-align:left}
-    .video-poster::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,17,32,.12),rgba(6,17,32,.78))}
-    .video-poster-content{position:relative;z-index:1;display:grid;gap:10px;max-width:80%}
-    .video-play{display:inline-flex;align-items:center;justify-content:center;width:74px;height:74px;border-radius:999px;background:rgba(110,231,216,.92);color:#04101d;font-size:1.4rem;font-weight:800;box-shadow:0 10px 30px rgba(0,0,0,.25)}
-    .video-meta{display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:.95rem}
+    .video-poster{display:block;cursor:pointer;border:0;padding:0;background-color:#071427;background-size:cover;background-position:center;background-repeat:no-repeat;color:var(--text);text-align:left}
+    .video-poster::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,10,20,.12),rgba(4,10,20,.26) 45%,rgba(4,10,20,.46) 100%)}
+    .video-poster::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.04)}
+    .video-poster-content{position:absolute;inset:0;z-index:1;display:grid;place-items:center;padding:24px}
+    .video-play{display:inline-flex;align-items:center;justify-content:center;width:92px;height:92px;border-radius:999px;background:rgba(7,17,32,.72);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(12px);box-shadow:0 10px 32px rgba(0,0,0,.32);transition:transform .18s ease, background .18s ease, box-shadow .18s ease}
+    .video-play::before{content:"";display:block;margin-left:5px;border-top:16px solid transparent;border-bottom:16px solid transparent;border-left:24px solid #ffffff}
+    .video-poster:hover .video-play,.video-poster:focus-visible .video-play{transform:scale(1.06);background:rgba(110,231,216,.18);box-shadow:0 14px 34px rgba(0,0,0,.38)}
+    .video-poster:focus-visible{outline:2px solid rgba(110,231,216,.9);outline-offset:3px}
     .video-inline-cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:14px 16px;border-radius:18px;border:1px solid var(--border);background:rgba(255,255,255,.04)}
     .video-inline-cta p{margin:0;color:var(--muted)}
     .hero-quick-points{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
@@ -281,11 +284,9 @@
           <h1 id="hero-heading">BertlClaw hilft Unternehmen in Österreich, mehr Anfragen über ihre Website zu bekommen.</h1>
           <div class="video-block" aria-label="Kurze Leistungsbeschreibung als Video">
             <div class="video-shell">
-              <button class="video-poster" type="button" data-video-embed="https://www.youtube-nocookie.com/embed/ahEUOZ7Ba4Q?autoplay=1&rel=0&modestbranding=1&playsinline=1&mute=1" data-video-title="Kurze Leistungsbeschreibung BertlClaw" style="background-image:url('bertlclaw-assets/video-poster-hero.jpg');">
+              <button class="video-poster" type="button" aria-label="Hero-Video abspielen: Kurze Leistungsbeschreibung BertlClaw" data-video-embed="https://www.youtube-nocookie.com/embed/ahEUOZ7Ba4Q?autoplay=1&rel=0&modestbranding=1&playsinline=1&mute=1" data-video-title="Kurze Leistungsbeschreibung BertlClaw" style="background-image:url('bertlclaw-assets/video-poster-hero.jpg');">
                 <span class="video-poster-content">
-                  <span class="video-play">▶</span>
-                  <span><strong>In unter 45 Sekunden verstehen, was BertlClaw konkret liefert.</strong></span>
-                  <span class="video-meta"><span>Kurze Leistungsbeschreibung</span><span>lädt erst nach Klick</span><span>mobil optimiert</span></span>
+                  <span class="video-play" aria-hidden="true"></span>
                 </span>
               </button>
             </div>
@@ -468,11 +469,9 @@
         </div>
         <div class="video-block" aria-label="Vertrauensvideo über BertlClaw">
           <div class="video-shell">
-            <button class="video-poster" type="button" data-video-embed="https://player.vimeo.com/video/ahEUOZ7Ba4Q?autoplay=1&muted=1&title=0&byline=0&portrait=0" data-video-title="So arbeitet BertlClaw" style="background-image:url('bertlclaw-assets/video-poster-trust.jpg');">
+            <button class="video-poster" type="button" aria-label="Trust-Video abspielen: So arbeitet BertlClaw" data-video-embed="https://www.youtube-nocookie.com/embed/ahEUOZ7Ba4Q?autoplay=1&rel=0&modestbranding=1&playsinline=1&mute=1" data-video-title="So arbeitet BertlClaw" style="background-image:url('bertlclaw-assets/video-poster-trust.jpg');">
               <span class="video-poster-content">
-                <span class="video-play">▶</span>
-                <span><strong>Kurze Erklärung, wie BertlClaw denkt, arbeitet und warum das Vertrauen schafft.</strong></span>
-                <span class="video-meta"><span>Trust Video</span><span>lädt erst nach Klick</span><span>ohne Performance-Bremse</span></span>
+                <span class="video-play" aria-hidden="true"></span>
               </span>
             </button>
           </div>
