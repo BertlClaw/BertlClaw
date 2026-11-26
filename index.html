@@ -622,6 +622,7 @@
               </div>
               <input type="hidden" name="_subject" value="Neue BertlClaw Anfrage" />
               <input type="hidden" name="_language" value="de" />
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;" />
               <input type="hidden" name="page_path" id="hdn_page_path" value="" />
               <input type="hidden" name="page_title" id="hdn_page_title" value="" />
               <input type="hidden" name="referrer" id="hdn_referrer" value="" />
@@ -711,9 +712,7 @@
               headers:{'Accept':'application/json'}
             });
             if(response.ok){
-              status.className='form-status is-visible';
-              status.textContent='Danke. Die Anfrage ist raus.';
-              form.reset();
+              window.location.href = new URL('danke.html', window.location.href).toString();
             } else {
               throw new Error('submit_failed');
             }
