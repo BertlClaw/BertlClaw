@@ -25,11 +25,20 @@ Kein anonymer Agentur-Auftritt, sondern ein klar zugeordnetes deutschsprachiges 
 - **Sprache:** Deutsch
 - **Fokus:** Landingpages, Website-Texte, Positionierung, digitale Struktur, KI-Unterstützung
 
+## Produktionsbetrieb
+
+- **Produktive Website:** https://bertlclaw.at
+- **Produktives Repository:** `BertlClaw/BertlClaw`
+- **Produktionsbranch:** `main`
+- **Nicht produktiv:** `BertlClaw/bertlclaw-site` ist keine Produktionsquelle für `bertlclaw.at`.
+
+Vor jeder Veröffentlichung muss die tatsächliche Produktionsquelle anhand der aktiven GitHub-Pages-Konfiguration, der Domain-Zuordnung und des produktiven Branches überprüft werden. Nach jeder Veröffentlichung muss die Live-Website auf Funktionalität und Übereinstimmung mit dem freigegebenen Auftrag geprüft werden. Ein Veröffentlichungsauftrag gilt erst nach erfolgreicher Live-Prüfung als abgeschlossen.
+
 ## Links
 
-- Website: https://bertlclaw.github.io/bertlclaw/
-- Leistungen: https://bertlclaw.github.io/bertlclaw/services.html
-- Anwendungsfälle: https://bertlclaw.github.io/bertlclaw/use-cases.html
+- Website: https://bertlclaw.at/
+- Leistungen: https://bertlclaw.at/services.html
+- Anwendungsfälle: https://bertlclaw.at/use-cases.html
 
 ## Kurzprofil
 
